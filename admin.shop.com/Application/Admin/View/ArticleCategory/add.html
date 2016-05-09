@@ -1,0 +1,72 @@
+<extend name='Public:base'/>
+<block name='content'>
+    <h1>
+        <span class="action-span"><a href="{:U('index')}">文章分类管理</a></span>
+        <span class="action-span1"><a href="#">啊咿呀哟 管理中心</a></span>
+        <span id="search_id" class="action-span1"> - {$meta_title} </span>
+    </h1>
+    <div style="clear:both"></div>
+    <div class="main-div">
+        <form method="post" action="{:U('')}"enctype="multipart/form-data" >
+            <table cellspacing="1" cellpadding="3" width="100%">
+                <tr>
+                    <td class="label">文章分类名称</td>
+                    <td>
+                        <input type="text" name="name" maxlength="60" value="{$row.name}" />
+                        <span class="require-field">*</span>
+                    </td>
+                </tr>
+
+               <!-- <tr>
+                    <td class="label">品牌LOGO</td>
+                    <td>
+                        <input type="file" value="{$row.logo}" name="logo" id="logo" size="45"><br/>
+                        <span class="notice-span" style="display:block"  id="warn_brandlogo">请上传图片，做为品牌的LOGO！</span>
+                    </td>
+                </tr>-->
+                <tr>
+                    <td class="label">文章分类描述</td>
+                    <td>
+                        <textarea  name="intro" value="{$row.sort}" cols="60" rows="4"  ></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">文章分类排序</td>
+                    <td>
+                        <input type="text" name="sort" maxlength="40" size="15" value="{$row.sort}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">是否显示</td>
+                    <td>
+                        <input type="radio" class="status" name="status" value="1" /> 是
+                        <input type="radio" class="status" name="status" value="0"  /> 否
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">是否帮助类</td>
+                    <td>
+                        <input type="radio" class="is_help" name="is_help" value="1" /> 是
+                        <input type="radio" class="is_help" name="is_help" value="0"  /> 否
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><br />
+                        <input type="hidden" name="id" value="{$row['id']}"/>
+                        <input type="submit" class="button" value=" 确定 " />
+                        <input type="reset" class="button" value=" 重置 " />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</block>
+<block name='js'>
+    <js href="__JS__/jquery.min.js"/>
+    <script type="text/javascript">
+        $(function(){
+            $('.status').val([{$row.status|default=1}]);
+            $('.is_help').val([{$row.status|default=1}]);
+        });
+    </script>
+</block>

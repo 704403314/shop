@@ -24,7 +24,9 @@ define('BIND_MODULE','Admin');
 //定义域名
 define('MY_URL','http://admin.shop.com/');
 // 引入ThinkPHP入口文件
-//var_dump(__DIR__);exit;
+//var_dump(dirname(SITE_ROOT));exit;
+define('RUNTIME_PATH',SITE_ROOT . '/Runtime/');
+
 require "./ThinkPHP/ThinkPHP.php";
 
 // 亲^_^ 后面不需要任何代码了 就是如此简单

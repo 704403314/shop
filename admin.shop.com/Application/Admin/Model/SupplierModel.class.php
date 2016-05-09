@@ -45,6 +45,7 @@ class SupplierModel extends Model{
     public function add_data(){
 //        dump($this->data['pk']);exit;
         unset($this->data['pk']);
+
         return $this->add();
     }
 }
