@@ -1,0 +1,96 @@
+<extend name="Layout:base"/>
+<block name="content">
+    <h1>
+        <span class="action-span"><a href="__GROUP__/Category/categoryList">商品分类</a></span>
+        <span class="action-span1"><a href="__GROUP__">啊咿呀哟 管理中心</a></span>
+        <span id="search_id" class="action-span1"> - 添加分类 </span>
+        <div style="clear:both"></div>
+    </h1>
+    <div class="main-div">
+        <form action="{:U('')}" method="post" name="theForm" enctype="multipart/form-data">
+            <table width="100%" id="general-table">
+                <tr>
+                    <td class="label">分类名称:</td>
+                    <td>
+                        <input type='text' name='name' maxlength="20" value='' size='27' /> <font color="red">*</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">上级分类:</td>
+                    <td>
+                        <input type="hidden" name='parent_id' id="parent_id" value=""/>
+                        <input type="text" id="parent_name" value="请选择" disabled="disabled" style="padding-left:5px;"/>
+                        <ul id='goods-categories-tree' class='ztree' style='height:auto;'></ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">排序:</td>
+                    <td>
+                        <input type="text" name='sort' value="50" size="15" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">是否显示:</td>
+                    <td>
+                        <input type="radio" name="status" value="1"  checked="true"/> 是 
+                        <input type="radio" name="status" value="0"  /> 否
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">简介:</td>
+                    <td>
+                        <textarea name="intro" style='width:300px;height:100px'></textarea>
+                    </td>
+                </tr>
+            </table>
+            <div class="button-div">
+                <input type="submit" value=" 确定 " />
+                <input type="reset" value=" 重置 " />
+            </div>
+        </form>
+    </div>
+</block>
+<block name='css'>
+    <css href='__ZTREE__/css/zTreeStyle/zTreeStyle.css'/>
+    <style type='text/css'>
+        .ztree{
+            width:220px;
+            height:auto;
+            margin-top: 10px;
+            border: 1px solid #617775;
+            background: #f0f6e4;
+            overflow-y: scroll;
+            overflow-x: auto;
+        }
+    </style>
+</block>
+<block name='js'>
+    <js href='__JS__/jquery.min.js'/>
+    <js href='__ZTREE__/js/jquery.ztree.core.min.js'/>
+    <script type='text/javascript'>
+        var setting = {
+            data: {
+                simpleData: {
+                    enable: true,
+                    pIdKey: "parent_id",
+                }
+            },
+            callback: {
+                onClick: function(event,tree_id,tree_node){
+                    //我们可以通过第三个参数获取到点击的节点
+                    var goods_category_name = tree_node.name;
+                    var goods_category_id = tree_node.id;
+                    console.debug(goods_category_name,goods_category_id);
+                    $('#parent_id').val(goods_category_id);
+                    $('#parent_name').val(goods_category_name);
+                },
+            }
+        };
+
+        var zNodes = {$goods_categories};
+        $(function () {
+            var goods_category_ztree = $.fn.zTree.init($("#goods-categories-tree"), setting, zNodes);
+            goods_category_ztree.expandAll(true);
+        });
+    </script>
+</block>

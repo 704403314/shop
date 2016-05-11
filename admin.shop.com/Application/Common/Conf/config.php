@@ -19,6 +19,7 @@ return array(
         '__JS__'=>MY_URL.'/Public/js',
         '__UPLOADIFY__'=>MY_URL.'/Public/ext/uploadify',
         '__LAYER__'=>MY_URL.'/Public/ext/layer',
+        '__ZTREE__'=>MY_URL.'/Public/ext/ztree',
     ),
     'SESSION_TYPE'=>'Db',
     'PAGE_SIZE'         => 2,
