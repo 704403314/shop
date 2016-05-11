@@ -14,12 +14,16 @@ return array(
     'DB_PREFIX' => '', // 数据库表前缀
     'URL_MODULE'=>2,
     'TMPL_PARSE_STRING'=>array(
-        '__CSS__'=>MY_URL.'Public/css',
-        '__IMG__'=>MY_URL.'Public/images',
-        '__JS__'=>MY_URL.'Public/js',
+        '__CSS__'=>MY_URL.'/Public/css',
+        '__IMG__'=>MY_URL.'/Public/images',
+        '__JS__'=>MY_URL.'/Public/js',
+        '__UPLOADIFY__'=>MY_URL.'/Public/ext/uploadify',
+        '__LAYER__'=>MY_URL.'/Public/ext/layer',
     ),
     'SESSION_TYPE'=>'Db',
     'PAGE_SIZE'         => 2,
     'PAGE_THEME'        => '%HEADER% %FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END%',
     'TMPL_CACHE_ON'         =>  false,
+    'UPLOAD_SETTING' => require __DIR__."/upload.php",
+
 );

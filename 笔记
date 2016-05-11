@@ -12,3 +12,14 @@
    使用模型类的setField方法
    更改供应商状态值为0,商品名称加上后缀_del
    $data['name']=array('name'=>['exp','concat(name,"_del")'])
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+第二天
+品牌管理
+文章管理
+   使用自动完成添加文章的新增时间，
+   文章的信息通过联合查询获取到,alias方法给表取个别名,如下：
+     $row=$this->alias('a')->join("article_content as b on a.id=b.article_id")->find($id);
+文章分类管理
+   由于文章分类信息会被多次使用 所以将获取文章分类信息封装到getList方法里，方便维护
+   其中的getField('id,name')传两个参数 返回array(`id`=>`name`)关联数组 id字段值为key name字段值为value

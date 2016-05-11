@@ -25,14 +25,16 @@ class SupplierModel extends Model{
         $count=$this->where($condition)->count();
         // 实例化分页类
         $page=new \Think\Page($count,C('PAGE_SIZE'));
+        // 设置分页样式
+        $page->setConfig('theme',C('PAGE_THEME'));
+
         // 获取分页html
         $page_html=$page->show();
         // 页数处理
         if($p>$page->totalPages){
             $p=$page->totalPages;
         }
-        // 设置分页样式
-        $page->setConfig('theme',C('PAGE_THEME'));
+
         // 获取分页结果集
         $rows=$this->where($condition)->page($p,C('PAGE_SIZE'))->select();
 //

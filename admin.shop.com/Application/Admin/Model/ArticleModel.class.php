@@ -16,6 +16,10 @@ class ArticleModel extends Model{
 
     ];
 
+    protected $_auto=[
+      ['inputtime', NOW_TIME ,self::MODEL_INSERT]  ,
+    ];
+
     /**
      * 获取分页数据
      * @param array $condition
@@ -28,13 +32,14 @@ class ArticleModel extends Model{
         $condition=array_merge(['status'=>1],$condition);
         $count=$this->where($condition)->count();
         $page = new \Think\Page($count,C('PAGE_SIZE'));
+        $page->setConfig('theme',C('PAGE_THEME'));
         $page_html=$page->show();
 
         if($p>$page->totalPages){
             $p = $page->totalPages;
         }
-//        dump(C('PAGE_THEME'));
-//        dump($page->setConfig('theme',C('PAGE_THEME')));exit;
+//        dump(C('PAGE_THEME'));exit;
+
         $rows=$this->where($condition)->page($p,C('PAGE_SIZE'))->select();
 ////        $sql="SELECT a.name FROM article_category AS a RIGHT JOIN article AS b ON a.id=b.article_category_id ORDER BY b.id";
 ////        $names=$this->query($sql);
@@ -44,12 +49,7 @@ class ArticleModel extends Model{
 //            ->order('b.id')
 //            ->select();
 ////        dump($names);exit;
-//        $i=0;
-//        foreach($rows as $row){
-//            $row['category_name']=$names[$i];
-//            $i++;
-//        }
-//        dump($rows);exit;
+
         return array('rows'=>$rows ,'page_html'=>$page_html);
     }
 
@@ -65,9 +65,9 @@ class ArticleModel extends Model{
         // 不添加文章内容到文章表
         unset($data['content']);
         // 获取当前时间
-        $data['inputtime']=time();
+//        $data['inputtime']=time();
         // 获取插入id
-        $id=$this->add($data);
+        $id=$this->add();
 //        dump($id);exit;
         if($id){
             $new_data=array();

@@ -13,7 +13,7 @@
 
 // 检测PHP环境
 if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
-
+//phpinfo();
 // 开启调试模式 建议开发阶段开启 部署阶段注释或者设为false
 define('APP_DEBUG',True);
 define('SITE_ROOT',__DIR__);
@@ -22,7 +22,7 @@ define('APP_PATH','./Application/');
 //绑定模块
 define('BIND_MODULE','Admin');
 //定义域名
-define('MY_URL','http://admin.shop.com/');
+define('MY_URL','http://admin.shop.com');
 // 引入ThinkPHP入口文件
 //var_dump(dirname(SITE_ROOT));exit;
 define('RUNTIME_PATH',SITE_ROOT . '/Runtime/');

@@ -23,12 +23,13 @@ class ArticleCategoryModel extends Model{
         $condition=array_merge(['status'=>1],$condition);
         $count=$this->where($condition)->count();
         $page = new \Think\Page($count,C('PAGE_SIZE'));
+        $page->setConfig('theme', C('PAGE_THEME'));
         $page_html=$page->show();
 
         if($p>$page->totalPages){
             $p = $page->totalPages;
         }
-        $page->setConfig('theme', C('PAGE_THEME'));
+
         $rows=$this->where($condition)->page($p,C('PAGE_SIZE'))->select();
         return array('rows'=>$rows ,'page_html'=>$page_html);
     }
