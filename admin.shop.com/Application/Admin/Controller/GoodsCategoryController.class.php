@@ -31,6 +31,8 @@ class GoodsCategoryController extends Controller{
      *展示首页
      */
     public function index(){
+        $rows=$this->_model->getPage();
+        $this->assign($rows);
         $this->display();
     }
 
@@ -40,16 +42,71 @@ class GoodsCategoryController extends Controller{
      */
     public function add(){
         if(IS_POST){
-            if($this->_model->create()){
 
+            if($this->_model->create() === false){
+                // 自动验证失败
+                 $this->error($this->_model->getError());
             }
+            if($this->_model->addCategory() === false){
+                // 插入数据失败
+                $this->error($this->_model->getError());
+            }
+             // 添加数据成功
+            $this->success('添加数据成功',U('index',['nocache'=>NOW_TIME]));
         }else{
-            // 获取商品分类列表
-            $goods_categories=$this->_model->getList();
-//            dump($goods_categories);exit;
-            $this->assign('goods_categories',json_encode($goods_categories));
+            $this->_before_view();
             $this->display();
         }
 
+    }
+
+    /**
+     * 修改商品分类
+     *
+     */
+    public function edit($id){
+        if(IS_POST){
+
+            if($this->_model->create() === false){
+                // 自动验证失败
+                $this->error($this->_model->getError());
+            }
+            if($this->_model->updateCategory() === false){
+                // 插入数据失败
+                $this->error($this->_model->getError());
+            }
+            // 添加数据成功
+            $this->success('修改数据成功',U('index',['nocache'=>NOW_TIME]));
+        }else{
+            // 获取列表数据
+            $this->_before_view();
+            // 获取当前数据
+            $row = $this->_model->find($id);
+            $this->assign('row',$row);
+            $this->display('add');
+        }
+
+    }
+
+    /**
+     * 删除数据
+     */
+    public function delete($id){
+        $res = $this->_model->deleteCategory($id);
+        if($res){
+            $this->success('删除成功',U('index',['nocache'=>NOW_TIME]));
+        }else{
+            $this->error($this->_model->getError(),U('index',['nocache'=>NOW_TIME]));
+        }
+    }
+    /**
+     * 获取分类列表
+     */
+    public function _before_view(){
+        // 获取商品分类列表
+        $goods_categories=$this->_model->getList();
+//            dump($goods_categories);exit;
+        array_unshift($goods_categories,['id'=>0,'parent_id'=>null,'name'=>"顶级分类"]);
+        $this->assign('goods_categories',json_encode($goods_categories));
     }
 }

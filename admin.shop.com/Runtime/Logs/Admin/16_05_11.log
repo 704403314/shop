@@ -46,3 +46,6 @@ ERR: 无法加载控制器:Public
 [ 2016-05-11T15:22:29+08:00 ] 127.0.0.1 /Public/ext/uploadify/common.css
 ERR: 无法加载控制器:Public
 
+[ 2016-05-11T21:13:12+08:00 ] 127.0.0.1 /Brand/edit
+ERR: 参数错误或者未定义:id
+

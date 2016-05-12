@@ -31,12 +31,12 @@
     <div style="clear:both"></div>
 </h1>
 <div class="main-div">
-    <form action="__GROUP__/Category/categoryAdd" method="post" name="theForm" enctype="multipart/form-data">
+    <form action="<?php echo U('');?>" method="post" name="theForm" enctype="multipart/form-data">
         <table width="100%" id="general-table">
             <tr>
                 <td class="label">分类名称:</td>
                 <td>
-                    <input type='text' name='cat_name' maxlength="20" value='' size='27' /> <font color="red">*</font>
+                    <input type='text' name='name' maxlength="20" value='<?php echo ($row["name"]); ?>' size='27' /> <font color="red">*</font>
                 </td>
             </tr>
             <tr>
@@ -50,14 +50,14 @@
             <tr>
                 <td class="label">排序:</td>
                 <td>
-                    <input type="text" name='sort'  value="50" size="15" />
+                    <input type="text" name='sort'  value='<?php echo ($row["sort"]); ?>' size="15" />
                 </td>
             </tr>
             <tr>
                 <td class="label">是否显示:</td>
                 <td>
-                    <input type="radio" name="status" value="1"  checked="true"/> 是
-                    <input type="radio" name="status" value="0"  /> 否
+                    <input type="radio" name="status" value="1"  class="status"/> 是
+                    <input type="radio" name="status" value="0"  class="status"/> 否
                 </td>
             </tr>
 
@@ -65,12 +65,13 @@
                 <td class="label">介绍:</td>
                 <td>
                     <textarea rows="5" cols="25" name="intro">
-
+                        <?php echo ($row["intro"]); ?>
                     </textarea>
                 </td>
             </tr>
         </table>
         <div class="button-div">
+            <input type="hidden" name="id" value="<?php echo ($row["id"]); ?>"/>
             <input type="submit" value=" 确定 " />
             <input type="reset" value=" 重置 " />
         </div>
@@ -108,7 +109,22 @@
         $(function(){
             var goods_category_ztree = $.fn.zTree.init($("#goods-categories-tree"),setting,zNodes);
             goods_category_ztree.expandAll(true);
+
+            // 选中单选框
+            $('.status').val([<?php echo ((isset($row["status"]) && ($row["status"] !== ""))?($row["status"]):1); ?>]);
+            <?php if(isset($row)): ?>// 回显父级分类
+              var parent_node = goods_category_ztree.getNodeByParam('id',<?php echo ($row["parent_id"]); ?>) ;
+              console.debug(parent_node);
+        // 选中父类
+              goods_category_ztree.selectNode(parent_node);
+              $('#parent_id').val(parent_node.id);
+              $('#parent_name').val(parent_node.name);
+
+                        <?php else: ?>
+        var parent_node = goods_category_ztree.getNodeByParam('id',0) ;
+        goods_category_ztree.selectNode(parent_node);<?php endif; ?>
         });
+
 
     </script>
 
