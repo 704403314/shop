@@ -18,15 +18,15 @@ if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
 define('APP_DEBUG',True);
 define('SITE_ROOT',__DIR__);
 // 定义应用目录
-define('APP_PATH','./Application/');
+define('APP_PATH',SITE_ROOT.'/Application/');
 //绑定模块
 define('BIND_MODULE','Admin');
 //定义域名
 define('MY_URL','http://admin.shop.com');
-// 引入ThinkPHP入口文件
-//var_dump(dirname(SITE_ROOT));exit;
-define('RUNTIME_PATH',SITE_ROOT . '/Runtime/');
 
-require "./ThinkPHP/ThinkPHP.php";
+//var_dump(dirname(SITE_ROOT));exit;
+//define('RUNTIME_PATH',SITE_ROOT . '/Runtime/');
+// 引入ThinkPHP入口文件
+require dirname(SITE_ROOT)."/ThinkPHP/ThinkPHP.php";
 
 // 亲^_^ 后面不需要任何代码了 就是如此简单

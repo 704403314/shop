@@ -12,7 +12,7 @@
 }
 .page a,
 .page span {
-    float: left;
+    float: right;
     margin-left: -1px;
     padding: 0 14px;
     height: 30px;

@@ -50,4 +50,11 @@ class SupplierModel extends Model{
 
         return $this->add();
     }
+
+    /**
+     * 供应商列表数据
+     */
+    public function getList(){
+        return $this->where(['status'=>1])->select();
+    }
 }

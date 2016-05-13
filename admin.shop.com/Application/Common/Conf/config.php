@@ -21,6 +21,7 @@ return array(
         '__LAYER__'=>MY_URL.'/Public/ext/layer',
         '__ZTREE__'=>MY_URL.'/Public/ext/ztree',
         '__TREEGRID__'=>MY_URL.'/Public/ext/treegrid',
+        '__UE__'=>MY_URL.'/Public/ext/ue',
     ),
     'SESSION_TYPE'=>'Db',
     'PAGE_SIZE'         => 20,

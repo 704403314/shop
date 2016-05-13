@@ -7,9 +7,9 @@ class GoodsCategoryModel extends Model{
      * @var \Admin\Model\GoodsCategoryModel
      */
 
-    protected $_validate=[
-        ['name' ,'require' ,'商品分类名称不能为空', self::EXISTS_VALIDATE, '', self::MODEL_BOTH],
-        ['name' ,'' ,'商品分类名称已存在', self::EXISTS_VALIDATE, 'unique', self::MODEL_INSERT],
+    protected $_validate = [
+        ['name', 'require', '商品分类名称不能为空', self::EXISTS_VALIDATE, '', self::MODEL_BOTH],
+        ['name', '', '商品分类名称已存在', self::EXISTS_VALIDATE, 'unique', self::MODEL_INSERT],
 
     ];
     /**
@@ -48,7 +48,7 @@ class GoodsCategoryModel extends Model{
      *
      */
     public function addCategory(){
-//
+
         // 实例化数据库操作类的对象
         $orm = D('NestedSetsMysql','Logic');
         // 实例化nestedSets 对象
@@ -67,6 +67,7 @@ class GoodsCategoryModel extends Model{
      * 修改数据
      */
     public function updateCategory(){
+//        dump($id);exit;
         // 先判断是否修改了父类
         $parent_id = $this->getFieldById($this->data["id"],'parent_id');
         if($parent_id != $this->data['parent_id']){
