@@ -147,9 +147,9 @@ class NestedSetsMysqlLogic implements DbMysql{
     public function getAll($sql, array $args = array())
     {
         // TODO: Implement getAll() method.
-        echo __METHOD__."<br/>";
-        dump(func_get_args());
-        echo "<hr/>";
+//        echo __METHOD__."<br/>";
+//        dump(func_get_args());
+//        echo "<hr/>";
     }
 
     /**
@@ -228,8 +228,8 @@ class NestedSetsMysqlLogic implements DbMysql{
     public function getOne($sql, array $args = array())
     {
         // TODO: Implement getOne() method.
-        echo __METHOD__."<br/>";
-        dump(func_get_args());
-        echo "<hr/>";
+//        echo __METHOD__."<br/>";
+//        dump(func_get_args());
+//        echo "<hr/>";
     }
 }

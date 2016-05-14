@@ -29,7 +29,10 @@ class GoodsController extends Controller{
     }
 
     public function index(){
+        // 分发数据
+        $this->assign($this->_model->getPage());
 
+        $this->display();
     }
 
     public function add(){
@@ -48,18 +51,63 @@ class GoodsController extends Controller{
             // 添加数据成功
             $this->success('添加数据成功',U('index',['nocache'=>NOW_TIME]));
         }else{
-            // 获取并展示品牌列表数据
-            $brands = D('brand')->getList();
-            $this->assign('brands',$brands);
-            // 获取并展示商品分类列表数据
-            $goods_categories = D('GoodsCategory')->getList();
-            $this->assign('goods_categories',json_encode($goods_categories));
-            // 获取并展示供应商分类列表数据
-            $suppliers = D('supplier')->getList();
-            $this->assign('suppliers',$suppliers);
+            $this->_before_view();
 //          dump($goods_categories);exit;
             $this->display();
 
+        }
+    }
+
+    /**
+     * 修改数据
+     */
+    public function edit($id){
+        if(IS_POST){
+            $id = I('post.id');
+            if($this->_model->create() === false){
+                // 自动验证失败
+                $this->error($this->_model->getError());
+            }
+            if($this->_model->updateGoods($id) === false){
+                // 修改数据失败
+                $this->error($this->_model->getError());
+            }
+            // 修改数据成功
+            $this->success('修改数据成功',U('index',['nocache'=>NOW_TIME]));
+        }else{
+            $this->_before_view();
+
+            // 获取并展示 商品信息
+            $row = $this->_model->getGoodsIntro($id);
+            $this->assign('row',$row);
+
+            $this->display('add');
+        }
+    }
+    // 展示下拉菜单数据
+    private function _before_view(){
+        // 获取并展示品牌列表数据
+        $brands = D('brand')->getList();
+        $this->assign('brands',$brands);
+
+        // 获取并展示商品分类列表数据
+        $goods_categories = D('GoodsCategory')->getList();
+        $this->assign('goods_categories',json_encode($goods_categories));
+
+        // 获取并展示供应商分类列表数据
+        $suppliers = D('supplier')->getList();
+        $this->assign('suppliers',$suppliers);
+    }
+
+    /**
+     * 删除功能
+     */
+    public function delete($id){
+        $res = $this->_model->save(['id'=>$id,'status'=>0]);
+        if($res){
+            $this->success('删除数据成功',U('index',['nocache'=>NOW_TIME]));
+        }else{
+            $this->error($this->_model->getError());
         }
     }
 }
