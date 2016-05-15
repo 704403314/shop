@@ -113,17 +113,14 @@
             // 选中单选框
             $('.status').val([<?php echo ((isset($row["status"]) && ($row["status"] !== ""))?($row["status"]):1); ?>]);
             <?php if(isset($row)): ?>// 回显父级分类
-              var parent_node = goods_category_ztree.getNodeByParam('id',<?php echo ($row["parent_id"]); ?>) ;
+                var parent_node = goods_category_ztree.getNodeByParam('id',<?php echo ($row["parent_id"]); ?>) ;
               console.debug(parent_node);
-        // 选中父类
-              goods_category_ztree.selectNode(parent_node);
-              $('#parent_id').val(parent_node.id);
-              $('#parent_name').val(parent_node.name);
-
-                        <?php else: ?>
-        var parent_node = goods_category_ztree.getNodeByParam('id',0) ;
+            <?php else: ?>
+               var parent_node  = goods_category_ztree.getNodeByParam('id',0) ;<?php endif; ?>
+            // 选中父类
+        goods_category_ztree.selectNode(parent_node);
+        $('#parent_id').val(parent_node.id);
         $('#parent_name').val(parent_node.name);
-        goods_category_ztree.selectNode(parent_node);<?php endif; ?>
         });
 
 

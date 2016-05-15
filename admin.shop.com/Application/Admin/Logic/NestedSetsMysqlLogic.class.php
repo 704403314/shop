@@ -227,9 +227,20 @@ class NestedSetsMysqlLogic implements DbMysql{
      */
     public function getOne($sql, array $args = array())
     {
-        // TODO: Implement getOne() method.
-//        echo __METHOD__."<br/>";
-//        dump(func_get_args());
-//        echo "<hr/>";
+        // 获取初始sql
+        $params = func_get_args();
+        $sql = array_shift($params);
+        // 根据每个替换字段 将sql拆分成数组
+        $sqls = preg_split('/\?[FTN]/',$sql);
+        // 删除最后一个空字符串
+        array_pop($sqls);
+        $sql = '';
+        foreach($sqls as $k=>$v){
+            $sql.= $v.$params[$k];
+        }
+        // 查询父节点数据
+        $rows = M()->query($sql);
+//        dump(array_shift($rows));exit;
+        return array_shift($rows);
     }
 }

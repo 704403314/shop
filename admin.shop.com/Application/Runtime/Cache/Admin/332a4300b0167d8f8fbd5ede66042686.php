@@ -19,32 +19,19 @@
         <div style="clear:both"></div>
     </h1>
     <div class="form-div">
-        <form action="" name="searchForm">
+        <form action="" name="searchForm" method="get">
             <img src="http://admin.shop.com/Public/images/icon_search.gif" width="26" height="22" border="0" alt="search" />
             <!-- 分类 -->
-            <select name="cat_id">
-                <option value="0">所有分类</option>
-            </select>
+            分类 <?php echo arr2select($goods_categories,'id','name','goods_category_id',I('get.goods_category_id'));?>
             <!-- 品牌 -->
-            <select name="brand_id">
-                <option value="0">所有品牌</option>
-            </select>
+            品牌 <?php echo arr2select($brands,'id','name','brand_id',I('get.brand_id'));?>
             <!-- 推荐 -->
-            <select name="intro_type">
-                <option value="0">全部</option>
-                <option value="is_best">精品</option>
-                <option value="is_new">新品</option>
-                <option value="is_hot">热销</option>
-            </select>
+            推荐 <?php echo onearr2select($goods_statues,'goods_status',I('get.goods_status'));?>
             <!-- 上架 -->
-            <select name="is_on_sale">
-                <option value=''>全部</option>
-                <option value="1">上架</option>
-                <option value="0">下架</option>
-            </select>
+            上架 <?php echo onearr2select($is_on_sale,'is_on_sale',I('get.is_on_sale'));?>
             <!-- 关键字 -->
-            关键字 <input type="text" name="keyword" size="15" />
-            <input type="submit" value=" 搜索 " class="button" />
+            关键字 <input type="text" name="keyword" size="15" value="<?php echo I('get.keyword');?>"/>
+            <input type="submit" value="搜索" class="button" />
         </form>
     </div>
 

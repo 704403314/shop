@@ -1,0 +1,138 @@
+<extend name='Public:base'/>
+<block name="css">
+    <css href="__UPLOADIFY__/common.css"/>
+</block>
+<block name='content'>
+    <h1>
+        <span class="action-span"><a href="{:U('index')}">角色管理</a></span>
+        <span class="action-span1"><a href="#">啊咿呀哟 管理中心</a></span>
+        <span id="search_id" class="action-span1"> - {$meta_title} </span>
+    </h1>
+    <div style="clear:both"></div>
+    <div class="main-div">
+        <form method="post" action="{:U('')}" enctype="multipart/form-data" >
+            <table cellspacing="1" cellpadding="3" width="100%">
+                <tr>
+                    <td class="label">角色名称</td>
+                    <td>
+                        <input type="text" name="name" maxlength="60" value="{$row.name}" />
+                        <span class="require-field">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">拥有权限</td>
+                    <td>
+                        <div id='permission-ids'></div>
+                        <ul id='permission-tree' class='ztree' style='height:auto;'></ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">角色描述</td>
+                    <td>
+                        <textarea  name="intro" cols="60" rows="4">{$row.intro}</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">排序</td>
+                    <td>
+                        <input type="text" name="sort" maxlength="40" size="15" value="{$row.sort|default=20}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">是否显示</td>
+                    <td>
+                        <input type="radio" name="status" value="1" class="status"/> 是
+                        <input type="radio" name="status" value="0" class="status"/> 否
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><br />
+                        <input type="hidden" name="id" value="{$row.id}"/>
+                        <input type="submit" class="button" value=" 确定 " />
+                        <input type="reset" class="button" value=" 重置 " />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</block>
+<block name='css'>
+    <css href='__ZTREE__/css/zTreeStyle/zTreeStyle.css'/>
+    <style type='text/css'>
+        .ztree{
+            width:220px;
+            height:auto;
+            margin-top: 10px;
+            border: 1px solid #617775;
+            background: #f0f6e4;
+            overflow-y: scroll;
+            overflow-x: auto;
+        }
+    </style>
+</block>
+<block name='js'>
+    <js href="__JS__/jquery.min.js"/>
+    <js href="__LAYER__/layer.js"/>
+    <js href='__ZTREE__/js/jquery.ztree.core.min.js'/>
+    <js href='__ZTREE__/js/jquery.ztree.excheck.js'/>
+    <script type='text/javascript'>
+        var setting = {
+            check: {
+                enable: true,
+                chkboxType: {"Y": "s", "N": "s"},
+            },
+            data :{
+                simpleData:{
+                    enable:true,
+                    pIdKey:"parent_id",
+                }
+            },
+            callback:{
+                onCheck:function(){
+//                    alert(1);
+                    // 获取勾选的节点列表
+                    var nodes = permission_tree.getCheckedNodes(true);
+                    // 每一次勾选事件发生 先清空之前已勾选的
+                    permission_ids_node.empty();
+                    $(nodes).each(function(){
+                        // 添加节点到div中
+                        var html = '<input type="hidden" name="permission_ids[]" value="'+this.id+'" />';
+                        $(html).appendTo(permission_ids_node);
+                    })
+                }
+            }
+        };
+
+        // 获取后台传来的所有权限数据
+        var zNodes = {$permissions};
+        console.debug(zNodes);
+        var permission_tree=null;
+        var permission_ids_node = $('#permission-ids');
+        $(function(){
+            // 初始化ztree
+            permission_tree = $.fn.zTree.init($('#permission-tree'),setting,zNodes);
+            permission_tree.expandAll(true);
+            // 回显商品状态
+            $('.status').val([{$row.status|default=1}]);
+
+            // 回显拥有的权限
+            <present name="row">
+//                        alert(1);
+                            // 获取后台传过来的该角色拥有的权限
+                  var permission_ids = {$row.permission_ids};
+//                    alert(permission_ids);
+                $(permission_ids).each(function(i,e) {
+                    console.debug(e);
+                    // 找到当前节点
+                    var node = permission_tree.getNodeByParam('id',e);
+//                    alert(node);
+                    permission_tree.checkNode(node,true);
+
+                    // 添加节点到div
+                    var html = '<input type="hidden" name="permission_ids[]" value="' + e + '" />';
+                    $(html).appendTo(permission_ids_node);
+                });
+            </present>
+        });
+    </script>
+</block>

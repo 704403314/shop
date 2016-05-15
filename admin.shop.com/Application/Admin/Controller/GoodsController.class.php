@@ -29,8 +29,22 @@ class GoodsController extends Controller{
     }
 
     public function index(){
+
+        // 获取并展示品牌列表数据
+        $brands = D('brand')->getList();
+        $this->assign('brands',$brands);
+
+        // 获取并展示商品分类列表数据
+        $goods_categories = D('GoodsCategory')->getList();
+        $this->assign('goods_categories',$goods_categories);
+        
+        // 分配商品状态数据
+        $this->assign('goods_statues',D('Goods')->goods_statues);
+        $this->assign('is_on_sale',D('Goods')->is_on_sale);
+
+        $cond = $this->_model->getCond();
         // 分发数据
-        $this->assign($this->_model->getPage());
+        $this->assign($this->_model->getPage($cond));
 
         $this->display();
     }

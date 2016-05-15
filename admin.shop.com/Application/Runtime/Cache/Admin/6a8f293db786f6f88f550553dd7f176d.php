@@ -163,7 +163,7 @@
                             <div class="myupload-img-box">
                                <?php if(is_array($row["paths"])): foreach($row["paths"] as $key=>$path): ?><div class="myupload-pre-item">
                                    <img src="<?php echo ($path); ?>"/>
-                                   <a href="#">×</a>
+                                   <a href="#" data="<?php echo ($key); ?>">×</a>
                                    </div><?php endforeach; endif; ?>
 
                             </div>
@@ -211,6 +211,43 @@
             upload_goods();
             // 调用上传相册方法
             upload_gallery();
+//        <div class="myupload-img-box">
+//                <?php if(is_array($row["paths"])): foreach($row["paths"] as $key=>$path): ?>//                <div class="myupload-pre-item">
+//                <img src="<?php echo ($path); ?>"/>
+//                <a href="#" data="<?php echo ($key); ?>">×</a>
+//        </div>
+//<?php endforeach; endif; ?>
+//
+//        </div>
+          // 相册a标签点击事件
+        $(".myupload-img-box").on('click','.myupload-pre-item a',function(){
+            // 找到当前节点
+            var node = $(this);
+            // 获取data属性值
+            var data = node.attr('data');
+//            alert(data);
+//            console.debug($(this).attr('data'));
+            if(data){ //已有的数据 ajax删除
+                var url = '<?php echo U('GoodsGallery/delete');?>';
+                var  send_data = {
+                    "id":data,
+                }
+                $.getJSON(url,send_data,function(v){
+//                    console.debug(v);
+                    if(v.status){
+                        node.parent().remove();
+
+                    }
+                })
+            }else{
+
+                node.parent().remove();
+            }
+            layer.msg('删除成功',{icon:6,time:1000});
+                 return false;
+        });
+
+
             // 选中单选框
             $('.is_on_sale').val([<?php echo ((isset($row["is_on_sale"]) && ($row["is_on_sale"] !== ""))?($row["is_on_sale"]):1); ?>]);
             // 回显商品的市场状态
@@ -249,15 +286,11 @@
 //                        console.dubug(data);
                     data = $.parseJSON(data);
                     if(data.status){
-//                        <!--<div class="myupload-pre-item">-->
-//                        <!--<img src="http://admin.shop.com/Public/images/goods3.jpg"/>-->
-//                    <!--<a href="#">×</a>-->
-//                        <!--</div>-->
 
                       var html = '<div class="myupload-pre-item">';
                         html += '<input type="hidden" name="path[]" value="'+data.file_url+'" />';
                         html += '<img src="'+data.file_url+'"/>';
-                        html += '<a href="#">×</a></div>';
+                        html += '<a href="#" date="<?php echo ($key); ?>">×</a></div>';
                         $(html).appendTo($('.myupload-img-box'));
                          // 弹出信息
                         layer.msg('上传成功',{icon:6,time:1000});

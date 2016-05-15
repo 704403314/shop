@@ -1,0 +1,106 @@
+<extend name="Public:base"/>
+<block name="content">
+    <h1>
+        <span class="action-span"><a href="{:U('index')}">权限列表</a></span>
+        <span class="action-span1"><a href="__GROUP__">啊咿呀哟 管理中心</a></span>
+        <span id="search_id" class="action-span1"> - 添加权限 </span>
+        <div style="clear:both"></div>
+    </h1>
+    <div class="main-div">
+        <form action="{:U('')}" method="post" name="theForm" enctype="multipart/form-data">
+            <table width="100%" id="general-table">
+                <tr>
+                    <td class="label">权限名称:</td>
+                    <td>
+                        <input type='text' name='name' maxlength="20" value='{$row.name}' size='27' /> <font color="red">*</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">路径:</td>
+                    <td>
+                        <input type='text' name='path' maxlength="20" value='{$row.path}' size='27' />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">父级权限:</td>
+                    <td>
+                        <input type="hidden" name='parent_id' id="parent_id" value=""/>
+                        <input type="text" id="parent_name" value="请选择" disabled="disabled" style="padding-left:5px;"/>
+                        <ul id='permission_tree' class='ztree' style='height:auto;'></ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">排序:</td>
+                    <td>
+                        <input type="text" name='sort' value="{$row.sort|default=50}" size="15" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">简介:</td>
+                    <td>
+                        <textarea name="intro" style='width:300px;height:100px'>{$row.intro}</textarea>
+                    </td>
+                </tr>
+            </table>
+            <div class="button-div">
+                <input type="hidden" name="id" value="{$row.id}"/>
+                <input type="submit" value=" 确定 " />
+                <input type="reset" value=" 重置 " />
+            </div>
+        </form>
+    </div>
+</block>
+<block name='css'>
+    <css href='__ZTREE__/css/zTreeStyle/zTreeStyle.css'/>
+    <style type='text/css'>
+        .ztree{
+            width:220px;
+            height:auto;
+            margin-top: 10px;
+            border: 1px solid #617775;
+            background: #f0f6e4;
+            overflow-y: scroll;
+            overflow-x: auto;
+        }
+    </style>
+</block>
+<block name='js'>
+    <js href='__JS__/jquery.min.js'/>
+    <js href='__ZTREE__/js/jquery.ztree.core.min.js'/>
+    <script type='text/javascript'>
+        var setting = {
+            data: {
+                simpleData: {
+                    enable: true,
+                    pIdKey: "parent_id",
+                }
+            },
+            callback: {
+                onClick: function(event,tree_id,tree_node){
+                    //我们可以通过第三个参数获取到点击的节点
+                    var goods_category_name = tree_node.name;
+                    var goods_category_id = tree_node.id;
+                    console.debug(goods_category_name,goods_category_id);
+                    $('#parent_id').val(goods_category_id);
+                    $('#parent_name').val(goods_category_name);
+                },
+            }
+        };
+
+        var zNodes = {$permissions};
+        $(function () {
+            var permission_ztree = $.fn.zTree.init($("#permission_tree"), setting, zNodes);
+            permission_ztree.expandAll(true);
+            <present name="row">
+            //回显父级权限
+            var parent_node = permission_ztree.getNodeByParam('id',{$row.parent_id});
+        <else />
+        var parent_node = permission_ztree.getNodeByParam('id',0);
+        </present>
+        console.debug(parent_node);
+        permission_ztree.selectNode(parent_node);
+        $('#parent_id').val(parent_node.id);
+        $('#parent_name').val(parent_node.name);
+        });
+    </script>
+</block>

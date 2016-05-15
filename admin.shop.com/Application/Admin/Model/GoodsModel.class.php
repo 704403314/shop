@@ -22,6 +22,52 @@ class GoodsModel extends Model{
         ['goods_status', 'array_sum', self::MODEL_BOTH,'function'],
         ['sn', 'createSn', self::MODEL_INSERT,'callback'],
     ];
+    // 保存商品状态数据
+    public $goods_statues = [
+       1=>'精品',
+       2=>'新品',
+       4=>'热销',
+    ];
+    // 保存商品是否上架信息
+    public $is_on_sale = [
+        1=>'上架',
+        0=>'下架',
+    ];
+
+
+    /**
+     *
+     */
+    public function getCond(){
+        $cond = [];
+        // 获取商品分类
+        $goods_category_id = I('get.goods_category_id');
+        if($goods_category_id){
+            $cond['goods_category_id'] = $goods_category_id;
+        }
+        // 获取商品品牌
+        $brand_id= I('get.brand_id');
+        if($brand_id){
+            $cond['brand_id'] = $brand_id;
+        }
+        // 获取商品状态
+        $goods_status= I('get.goods_status');
+        if($goods_status){
+            $cond[] = "goods_status & $goods_status";
+        }
+        // 获取商品是否上架
+        $is_on_sale = I('get.is_on_sale');
+        if(strlen($is_on_sale)){
+            $cond['is_on_sale'] = $is_on_sale;
+        }
+        // 获取商品关键字
+        $keyword = I('get.keyword');
+        if($keyword){
+            $cond['name'] = array('like','%'.$keyword.'%');
+        }
+
+        return $cond;
+    }
 
     /**
      * 生成料号
@@ -53,6 +99,7 @@ class GoodsModel extends Model{
         $cond = array_merge(['status'=>1],$cond);
         // 获取总条数
         $count = $this->where($cond)->count();
+//        dump($this->getLastSql());exit;
         // 实例化分页类
         $page = new \Think\Page($count,$size);
         // 获取分页html
@@ -227,8 +274,8 @@ class GoodsModel extends Model{
         $row = $this->alias('g')
             ->join("__GOODS_INTRO__ as i on g.id = i.goods_id")
             ->find($id);
-        $row['paths'] = M('GoodsGallery')->where(['goods_id'=>$id])->getField('path',true);
-//        dump($row);exit;
+        $row['paths'] = M('GoodsGallery')->where(['goods_id'=>$id])->getField('id,path',true);
+//        dump($row['paths']);exit;
         return $row;
     }
 }

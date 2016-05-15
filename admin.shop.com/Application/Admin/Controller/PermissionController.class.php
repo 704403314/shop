@@ -1,27 +1,25 @@
 <?php
-/**
- * 品牌控制器
- */
 namespace Admin\Controller;
 use Think\Controller;
-/**
- * Class BrandController
- * @package Admin\Controller
- */
-class BrandController extends Controller{
-            private $_model=null;
+
+class PermissionController extends Controller{
+    /**
+     * @var \Admin\Controller\PermissionController
+     */
+
+    private $_model=null;
     /**
      * 初始化控制器参数
      */
     public function _initialize(){
-         $this->_model=D('Brand');
+        $this->_model=D('Permission');
         // 定义标题信息
         $titles=array(
-           'index'=>'管理品牌',
-            'add'=>'添加品牌',
-            'edit'=>'修改品牌',
+            'index'=>'管理权限',
+            'add'=>'添加权限',
+            'edit'=>'修改权限',
         );
-        $meta_title=isset($titles[ACTION_NAME])?$titles[ACTION_NAME]:'管理品牌';
+        $meta_title=isset($titles[ACTION_NAME])?$titles[ACTION_NAME]:'管理权限';
         $this->assign('meta_title',$meta_title);
 
     }
@@ -30,23 +28,13 @@ class BrandController extends Controller{
      *展示首页
      */
     public function index(){
-//        echo  11;exit;
-        // 接收搜索条件
-//        dump($this->_model);exit;
-        $name=I('get.name');
-        $condition=array();
-        if($name){
-            $condition['name']=['like','%'.$name.'%'];
-        }
-          // 调用模型
-        $rows = $this->_model->getPage($condition);
-        // 分发数据
-        $this->assign($rows);
+        $this->assign('rows',$this->_model->where(['status'=>1])->order('lft')->select());
         $this->display();
+
     }
 
     /**
-     * 添加品牌
+     * 权限添加
      */
     public function add(){
         if(IS_POST){
@@ -55,19 +43,21 @@ class BrandController extends Controller{
                 $this->error($this->_model->getError());
             }
             // 判断插入
-            if($this->_model->add_brand() === false){
+            if($this->_model->addPermission() === false){
                 $this->error($this->_model->getError());
             }
 
             $this->success('添加数据成功',U('index',['nocache'=>NOW_TIME]));
 
         }else{
+            // 展示列表数据
+            $this->_before_view();
             $this->display();
         }
     }
 
     /**
-     * 修改品牌
+     * 修改权限
      */
     public function edit($id){
         if(IS_POST){
@@ -76,7 +66,7 @@ class BrandController extends Controller{
                 $this->error($this->_model->getError());
             }
             // 判断插入
-            if($this->_model->edit_brand() === false){
+            if($this->_model->updatePermission() === false){
                 $this->error($this->_model->getError());
             }
 
@@ -85,22 +75,31 @@ class BrandController extends Controller{
         }else{
             $row=$this->_model->find($id);
             $this->assign('row',$row);
+            // 展示列表数据
+            $this->_before_view();
             $this->display('add');
         }
     }
 
     /**
-     * 删除品牌
+     * 删除权限
      */
     public function delete($id){
-    $data=array(
-      'id'=>$id,
-        'status'=>0,
-        'name'=>array('exp','concat(`name`,"_del")'),
-    );
-        $this->_model->setField($data);
-        $this->success('删除成功',U('index',['nocache'=>NOW_TIME]));
-}
+       $res = $this->_model->deletePermission($id);
+        if($res){
+            $this->success('删除数据成功',U('index',['nocache'=>NOW_TIME]));
+        }else{
+            $this->error($this->_model->getError());
+        }
+    }
 
+    /**
+     * 展示列表数据
+     */
+    public function _before_view(){
+        $permissions = $this->_model->getList();
+        array_unshift($permissions,['id' => 0, 'name' => '顶级权限', 'parent_id' => null]);
+        $this->assign('permissions',json_encode($permissions));
+    }
 
 }

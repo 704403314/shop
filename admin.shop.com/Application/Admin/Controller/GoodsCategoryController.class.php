@@ -31,7 +31,7 @@ class GoodsCategoryController extends Controller{
      *展示首页
      */
     public function index(){
-        $rows=$this->_model->getPage();
+        $rows=$this->getList();
         $this->assign($rows);
         $this->display();
     }

@@ -1,0 +1,44 @@
+<extend name="Public:base"/>
+<block name="content">
+    <h1>
+        <span class="action-span"><a href="{:U('add')}">添加权限</a></span>
+        <span class="action-span1"><a href="__GROUP__">啊咿呀哟 管理中心</a></span>
+        <span id="search_id" class="action-span1"> - 商品权限 </span>
+        <div style="clear:both"></div>
+    </h1>
+    <form method="post" action="" name="listForm">
+        <div class="list-div" id="listDiv">
+            <table width="100%" cellspacing="1" cellpadding="2" id="list-table" class='tree'>
+                <tr>
+                    <th>权限名称</th>
+                    <th>权限路径</th>
+                    <th>描述</th>
+                    <th>操作</th>
+                </tr>
+                <foreach name="rows" item="row">
+                    <tr align="center" class='treegrid-{$row.id} <neq name="row.level" value="1">treegrid-parent-{$row.parent_id}</neq>'>
+                        <td align="left" class="first-cell" >{$row.name}</td>
+                        <td width="30%" align="center">{$row.path}</td>
+                        <td width="30%" align="center">{$row.intro}</td>
+                        <td width="10%" align="center">
+                            <a href="{:U('edit',['id'=>$row['id']])}">编辑</a> |
+                            <a href="{:U('delete',['id'=>$row['id']])}" title="移除" onclick="">移除</a>
+                        </td>
+                    </tr>
+                </foreach>
+            </table>
+        </div>
+    </form>
+</block>
+<block name='css'>
+    <css href='__TREEGRID__/css/jquery.treegrid.css'/>
+</block>
+<block name='js'>
+    <js href="__JS__/jquery.min.js"/>
+    <js href="__TREEGRID__/js/jquery.treegrid.js"/>
+    <script type='text/javascript'>
+        $(function(){
+            $('.tree').treegrid();
+        });
+    </script>
+</block>
