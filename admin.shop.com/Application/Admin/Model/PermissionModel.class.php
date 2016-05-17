@@ -63,16 +63,46 @@ class PermissionModel extends Model{
      */
 
     public function deletePermission($id){
+        $this->startTrans();
         // 实例化nested 提供的数据库操作对象
         $orm = D('NestedSetsMysql','Logic');
         // 实例化nested对象
         $nestedSets = new \Admin\Service\NestedSets($orm,$this->trueTableName,'lft','rght','parent_id','id','level');
-        // 修改层级关系
+
+        // 获取当前记录信息
+        $permission_info = $this->field('lft,rght')->find($id);
+        // 因为同时要删除子节点 所以保存要删除 权限的节点范围
+        $cond = [
+          'lft'=>['egt',$permission_info['lft']],
+            'rght'=>['elt',$permission_info['rght']],
+        ];
+
+
+        // 根据要删除的节点范围获取所有要删除的权限id
+        $range = $this->where($cond)->getField('id',true);
+//        dump($permission_info);exit;
+        // 删除角色-权限关联关系
+        if(M('RolePermission')->where(['permission_id'=>['in',$range]])->delete() === false){
+            $this->error = '删除角色-权限关联关系失败';
+            $this->rollback();
+            return false;
+        }
+
+        // 删除管理员-权限关联关系
+        if(M('AdminPermission')->where(['permission_id'=>['in',$range]])->delete() === false){
+            $this->error = '删除管理员-权限关联关系失败';
+            $this->rollback();
+            return false;
+        }
+
+        // 删除层级关系
         $res = $nestedSets->delete($id);
         if($res === false){
             $this->error = '删除失败';
+            $this->rollback();
             return false;
         }else{
+            $this->commit();
             return true;
         }
     }

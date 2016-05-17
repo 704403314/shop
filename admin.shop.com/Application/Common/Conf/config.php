@@ -10,7 +10,7 @@ return array(
     'DB_DEBUG'          => TRUE, // 数据库调试模式 开启后可以记录SQL日志
     'DB_FIELDS_CACHE'   => false, // 关掉字段缓存
     'DB_CHARSET'=> 'utf8', // 字符集
-    'SHOW_PAGE_TRACE'=>true,
+//    'SHOW_PAGE_TRACE'=>true,
     'DB_PREFIX' => '', // 数据库表前缀
     'URL_MODULE'=>2,
     'TMPL_PARSE_STRING'=>array(
@@ -23,7 +23,7 @@ return array(
         '__TREEGRID__'=>MY_URL.'/Public/ext/treegrid',
         '__UE__'=>MY_URL.'/Public/ext/ue',
     ),
-    'SESSION_TYPE'=>'Db',
+//    'SESSION_TYPE'=>'Db',
     'PAGE_SIZE'         => 20,
     'PAGE_THEME'        => '%HEADER% %FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END%',
     'TMPL_CACHE_ON'         =>  false,

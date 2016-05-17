@@ -241,6 +241,6 @@ class NestedSetsMysqlLogic implements DbMysql{
         // 查询父节点数据
         $rows = M()->query($sql);
 //        dump(array_shift($rows));exit;
-        return array_shift($rows);
+        return array_shift(array_shift($rows));
     }
 }

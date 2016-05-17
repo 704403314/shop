@@ -52,3 +52,10 @@ function onearr2select($data,$name,$selected=''){
     }
     return $html .= '</select>';
 }
+
+/**
+ * 密码加密
+ */
+    function salt_mcrypt($p,$salt){
+    return md5(md5($p).$salt);
+}

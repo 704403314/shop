@@ -136,6 +136,13 @@ class RoleModel extends Model{
             $this->rollback();
             return false;
         }
+
+        // 删除管理员-角色信息
+        if(M('AdminRole')->where(['role_id'=>$id])->delete() === false){
+            $this->error = "删除管理员-角色信息失败";
+            $this->rollback();
+            return false;
+        }
         $this->commit();
         return true;
     }

@@ -24,38 +24,52 @@
     <body>
         
     <h1>
-        <span class="action-span"><a href="<?php echo U('index');?>">权限列表</a></span>
+        <span class="action-span"><a href="<?php echo U('index');?>">商品菜单</a></span>
         <span class="action-span1"><a href="__GROUP__">啊咿呀哟 管理中心</a></span>
-        <span id="search_id" class="action-span1"> - 添加权限 </span>
+        <span id="search_id" class="action-span1"> - 添加菜单 </span>
         <div style="clear:both"></div>
     </h1>
     <div class="main-div">
         <form action="<?php echo U('');?>" method="post" name="theForm" enctype="multipart/form-data">
             <table width="100%" id="general-table">
                 <tr>
-                    <td class="label">权限名称:</td>
+                    <td class="label">菜单名称:</td>
                     <td>
                         <input type='text' name='name' maxlength="20" value='<?php echo ($row["name"]); ?>' size='27' /> <font color="red">*</font>
                     </td>
                 </tr>
                 <tr>
-                    <td class="label">路径:</td>
+                    <td class="label">path:</td>
                     <td>
-                        <input type='text' name='path'  value='<?php echo ($row["path"]); ?>'  />
+                        <input type='text' name='path' value='<?php echo ($row["path"]); ?>' size='27' placeholder='如非菜单需要填写'/>
                     </td>
                 </tr>
                 <tr>
-                    <td class="label">父级权限:</td>
+                    <td class="label">上级菜单:</td>
                     <td>
                         <input type="hidden" name='parent_id' id="parent_id" value=""/>
                         <input type="text" id="parent_name" value="请选择" disabled="disabled" style="padding-left:5px;"/>
-                        <ul id='permission_tree' class='ztree' style='height:auto;'></ul>
+                        <ul id='goods-categories-tree' class='ztree' style='height:auto;'></ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">关联权限:</td>
+                    <td>
+                        <div id="permission-id"></div>
+                        <ul id='permission-tree' class='ztree' style='height:auto;'></ul>
                     </td>
                 </tr>
                 <tr>
                     <td class="label">排序:</td>
                     <td>
                         <input type="text" name='sort' value="<?php echo ((isset($row["sort"]) && ($row["sort"] !== ""))?($row["sort"]):50); ?>" size="15" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">是否显示:</td>
+                    <td>
+                        <input type="radio" name="status" value="1" class='status'/> 是 
+                        <input type="radio" name="status" value="0" class='status'/> 否
                     </td>
                 </tr>
                 <tr>
@@ -80,6 +94,7 @@
         
     <script type="text/javascript" src="http://admin.shop.com/Public/js/jquery.min.js"></script>
     <script type="text/javascript" src="http://admin.shop.com/Public/ext/ztree/js/jquery.ztree.core.min.js"></script>
+    <script type="text/javascript" src="http://admin.shop.com/Public/ext/ztree/js/jquery.ztree.excheck.js"></script>
     <script type='text/javascript'>
         var setting = {
             data: {
@@ -93,26 +108,71 @@
                     //我们可以通过第三个参数获取到点击的节点
                     var goods_category_name = tree_node.name;
                     var goods_category_id = tree_node.id;
-                    console.debug(goods_category_name,goods_category_id);
                     $('#parent_id').val(goods_category_id);
                     $('#parent_name').val(goods_category_name);
                 },
             }
         };
 
-        var zNodes = <?php echo ($permissions); ?>;
+        var zNodes = <?php echo ($menus); ?>;
         $(function () {
-            var permission_ztree = $.fn.zTree.init($("#permission_tree"), setting, zNodes);
-            permission_ztree.expandAll(true);
-            <?php if(isset($row)): ?>//回显父级权限
-            var parent_node = permission_ztree.getNodeByParam('id',<?php echo ($row["parent_id"]); ?>);
-        <?php else: ?>
-        var parent_node = permission_ztree.getNodeByParam('id',0);<?php endif; ?>
-        console.debug(parent_node);
-        permission_ztree.selectNode(parent_node);
-        $('#parent_id').val(parent_node.id);
-        $('#parent_name').val(parent_node.name);
+            var goods_category_ztree = $.fn.zTree.init($("#goods-categories-tree"), setting, zNodes);
+            goods_category_ztree.expandAll(true);
+            //回显状态
+            $('.status').val([<?php echo ((isset($row["status"]) && ($row["status"] !== ""))?($row["status"]):1); ?>]);
+            <?php if(isset($row)): ?>//回显父级菜单
+                var parent_node = goods_category_ztree.getNodeByParam('id',<?php echo ($row["parent_id"]); ?>);
+            <?php else: ?>
+                var parent_node = goods_category_ztree.getNodeByParam('id',0);<?php endif; ?>
+            goods_category_ztree.selectNode(parent_node);
+            $('#parent_id').val(parent_node.id);
+            $('#parent_name').val(parent_node.name);
         });
+        
+        //----------------------------性感的分割线-----------------------------------
+        //展示权限的列表
+        var perm_setting = {
+            check: {
+                enable: true,
+                chkboxType: { "Y" : "s", "N" : "s" },
+            },
+            data: {
+                simpleData: {
+                    enable: true,
+                    pIdKey: "parent_id",
+                }
+            },
+            callback: {
+                onCheck: function(event,tree_id,tree_node){
+                    //获取所有已选择的菜单
+                    var select_nodes = perm_ztree.getCheckedNodes(true);
+                    perm_div.empty();
+                    var html = '';
+                    $(select_nodes).each(function(){
+                        html += '<input type="hidden" name="permission_id[]" value="'+this.id+'"/>';
+                    });
+                    $(html).appendTo(perm_div);
+                },
+            }
+        };
+        
+        var perm_zNodes = <?php echo ($permissions); ?>;
+        var perm_ztree = $.fn.zTree.init($("#permission-tree"), perm_setting, perm_zNodes);
+        var perm_div = $('#permission-id');
+        perm_ztree.expandAll(true);
+        //回显权限列表
+        <?php if(isset($row)): ?>//获取所关联的权限
+            var permission_ids = <?php echo ($row["permission_ids"]); ?>;
+            //遍历所有的关联权限
+            $(permission_ids).each(function(i,e){
+                //找到当前节点
+                var node = perm_ztree.getNodeByParam('id',e);
+                //选中
+                perm_ztree.checkNode(node,true);
+                //添加到隐藏域
+                var html = "<input type='hidden' name='permission_id[]' value='"+e+"'/>";
+                $(html).appendTo(perm_div);
+            });<?php endif; ?>
     </script>
 
     </body>

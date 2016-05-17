@@ -1,4 +1,15 @@
 <?php
 return array(
-	//'配置项'=>'配置值'
+    //不适用RBAC 限制地址
+	'IGNORE_URL'=>[
+        'Admin/Admin/login',
+        'Admin/Captcha/captcha',
+        'Admin/Admin/logout',
+    ],
+    'INDEX_URL'=>[
+        'Admin/Index/index',
+        'Admin/Index/top',
+        'Admin/Index/menu',
+        'Admin/Index/main',
+    ]
 );

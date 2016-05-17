@@ -1,0 +1,185 @@
+[ 2016-05-16T09:28:52+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T09:29:02+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T09:30:39+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T09:30:52+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T11:10:34+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-16T11:10:34+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-16T11:10:45+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-16T11:10:45+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-16T13:18:40+08:00 ] 127.0.0.1 /Admin/add
+ERR: Think\Model:getList方法不存在！
+
+[ 2016-05-16T13:20:25+08:00 ] 127.0.0.1 /Admin/add
+ERR: Think\Model:getList方法不存在！
+
+[ 2016-05-16T13:20:27+08:00 ] 127.0.0.1 /Admin/add
+ERR: Think\Model:getList方法不存在！
+
+[ 2016-05-16T13:20:28+08:00 ] 127.0.0.1 /Admin/add
+ERR: Think\Model:getList方法不存在！
+
+[ 2016-05-16T13:20:28+08:00 ] 127.0.0.1 /Admin/add
+ERR: Think\Model:getList方法不存在！
+
+[ 2016-05-16T13:20:29+08:00 ] 127.0.0.1 /Admin/add
+ERR: Think\Model:getList方法不存在！
+
+[ 2016-05-16T13:20:29+08:00 ] 127.0.0.1 /Admin/add
+ERR: Think\Model:getList方法不存在！
+
+[ 2016-05-16T13:20:29+08:00 ] 127.0.0.1 /Admin/add
+ERR: Think\Model:getList方法不存在！
+
+[ 2016-05-16T13:21:10+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T13:21:27+08:00 ] 127.0.0.1 /Admin/edit/1.html
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-16T13:21:31+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T13:21:52+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T13:22:19+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T18:00:39+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T18:01:30+08:00 ] 127.0.0.1 /Permission/add
+ERR: Think\Controller:getAdminInfo方法不存在！
+
+[ 2016-05-16T18:01:47+08:00 ] 127.0.0.1 /index.php/Permission/add.html
+ERR: Think\Controller:getAdminInfo方法不存在！
+
+[ 2016-05-16T18:04:29+08:00 ] 127.0.0.1 /index.php/Permission/add.html
+ERR: Think\Model:getList方法不存在！
+
+[ 2016-05-16T18:04:30+08:00 ] 127.0.0.1 /index.php/Permission/add.html
+ERR: Think\Model:getList方法不存在！
+
+[ 2016-05-16T18:05:30+08:00 ] 127.0.0.1 /index.php/Permission/add.html
+ERR: Think\Model:getList方法不存在！
+
+[ 2016-05-16T18:33:55+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T18:52:12+08:00 ] 127.0.0.1 /index.php/Admin/index/nocache/1463395930.html
+ERR: 模板不存在:D:\jingxishop\admin.shop.com/Application/Admin/View/Admin/index.html
+
+[ 2016-05-16T18:53:31+08:00 ] 127.0.0.1 /index.php/Admin/index/nocache/1463395930.html
+ERR: 模板不存在:D:\jingxishop\admin.shop.com/Application/Admin/View/Admin/index.html
+
+[ 2016-05-16T18:53:36+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T18:54:17+08:00 ] 127.0.0.1 /index.php/Admin/index/nocache/1463396055.html
+ERR: 模板不存在:D:\jingxishop\admin.shop.com/Application/Admin/View/Admin/index.html
+
+[ 2016-05-16T18:57:20+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T19:13:20+08:00 ] 127.0.0.1 /index.php/Admin/edit/id/1/nocache/1463397197.html
+ERR: Think\Model:getRoleInfo方法不存在！
+
+[ 2016-05-16T19:19:51+08:00 ] 127.0.0.1 /index.php/Admin/edit/id/1/nocache/1463397197.html
+ERR: Think\Model:getRoleInfo方法不存在！
+
+[ 2016-05-16T19:21:45+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T19:22:04+08:00 ] 127.0.0.1 /index.php/Admin/add.html
+ERR: 1062:Duplicate entry '123@qwe.com' for key 'email'
+ [ SQL语句 ] : INSERT INTO `admin` (`username`,`password`,`email`,`add_time`,`salt`) VALUES ('ceshi','6e2ad7683533d95c5c7ecde7e14c119c','123@qwe.com','1463397723','kgJAdy')
+
+[ 2016-05-16T19:25:22+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T19:27:13+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T20:01:02+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T20:01:53+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T20:02:33+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T20:02:35+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T20:02:36+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T20:03:44+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T20:03:46+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T20:03:47+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T20:03:48+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T20:04:07+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T20:04:09+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T20:04:17+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T20:14:46+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T20:15:04+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T20:15:05+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T20:15:47+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T20:16:16+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T20:17:55+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T20:34:55+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T20:35:50+08:00 ] 127.0.0.1 /index.php/Admin/edit.html
+ERR: Think\Model:updateRole方法不存在！
+
+[ 2016-05-16T20:52:18+08:00 ] 127.0.0.1 /Public/ext/layer/layer.js
+ERR: 无法加载控制器:Public
+
+[ 2016-05-16T21:37:25+08:00 ] 127.0.0.1 /index.php/Permission/delete/id/7.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : DELETE FROM `role_permission` WHERE `permission_id` IN ()
+

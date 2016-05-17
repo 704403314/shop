@@ -8,7 +8,7 @@ use Think\Controller;
 
 class GoodsCategoryController extends Controller{
     /**
-     * @var Admin\Controller\GoodsCategoryController
+     * @var \Admin\Controller\GoodsCategoryController
      */
     private $_model=null;
     /**
@@ -31,8 +31,8 @@ class GoodsCategoryController extends Controller{
      *展示首页
      */
     public function index(){
-        $rows=$this->getList();
-        $this->assign($rows);
+        $rows=$this->_model->getList();
+        $this->assign('rows',$rows);
         $this->display();
     }
 
