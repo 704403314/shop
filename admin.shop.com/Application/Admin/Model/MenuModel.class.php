@@ -15,6 +15,22 @@ class MenuModel extends Model{
 //    ];
 
     /**
+     * 获取当前用户可访问的菜单
+     */
+    public function getMenus(){
+//        SELECT id,NAME,path,parent_id FROM munu AS m
+//        INNER JOIN menu_permission  AS mp ON  m.id=mp.menu_id WHERE mp.permission_id in permission_ids();
+        // 去session中获取当前用户可以访问路径的permission_id
+        $permission_ids = permission_ids();
+        $menus = $this->field('id,name,path,parent_id')->distinct(true)->alias('m')
+                      ->join("inner join __MENU_PERMISSION__ as mp on m.id=mp.menu_id")
+                      ->where(['mp.permission_id'=>['in',$permission_ids]])
+                      ->select();
+//        dump($menus);exit;
+        return $menus;
+    }
+
+    /**
      * 获取列表
      */
     public function getList(){

@@ -123,34 +123,17 @@ body {
 <div id="main-div">
     <div id="menu-list">
         <ul id="menu-ul">
-            <li class="explode" key="02_cat_and_goods" name="menu">
-            商品管理
-                <ul>
-                    <li class="menu-item"><a href="<?php echo U('Goods/index');?>" target="main-frame">商品列表</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Goods/add');?>" target="main-frame">添加新商品</a></li>
-                    <li class="menu-item"><a href="<?php echo U('GoodsCategory/index');?>" target="main-frame">商品分类</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Brand/index');?>" target="main-frame">商品品牌</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Goods/edit');?>" target="main-frame">更新商品</a></li>
-                    <!--<li class="menu-item"><a href="goodsTrash.html" target="main-frame">商品回收站</a></li>-->
-                </ul>
-            </li>
+            <?php if(is_array($menus)): foreach($menus as $key=>$menu): if(($menu["parent_id"]) == "0"): ?><li class="explode" key="02_cat_and_goods" name="menu">
+                       <?php echo ($menu["name"]); ?>
+                        <ul>
+                            <?php if(is_array($menus)): foreach($menus as $key=>$second_menu): if(($second_menu["parent_id"]) == $menu["id"]): ?><li class="menu-item"><a href="<?php echo U($second_menu['path']);?>" target="main-frame"><?php echo ($second_menu["name"]); ?></a></li><?php endif; endforeach; endif; ?>
+                        </ul>
+                    </li><?php endif; endforeach; endif; ?>
 
-            <li class="explode" key="04_order" name="menu">
-            订单管理
+            <li class="explode" key="" name="menu">
+                个人设置
                 <ul>
-                    <li class="menu-item"><a href="orderList.html" target="main-frame">订单列表</a></li>
-                    <li class="menu-item"><a href="orderQuery.html" target="main-frame">订单查询</a></li>
-                    <li class="menu-item"><a href="orderAdd.html" target="main-frame">添加订单</a></li>
-                    <li class="menu-item"><a href="delivery_list.html" target="main-frame">发货单列表</a></li>
-                    <li class="menu-item"><a href="back_list.html" target="main-frame">退货单列表</a></li>
-                </ul>
-            </li>
-            <li class="explode" key="08_members" name="menu">
-            会员管理
-                <ul>
-                    <li class="menu-item"><a href="userList.html" target="main-frame">会员列表</a></li>
-                    <li class="menu-item"><a href="userAdd.html" target="main-frame">添加会员</a></li>
-                    <li class="menu-item"><a href="userMessage.html" target="main-frame">会员留言</a></li>
+                    <li class="menu-item"><a href="<?php echo U('Admin/changePwd');?>" target="main-frame">修改密码</a></li>
                 </ul>
             </li>
         </ul>

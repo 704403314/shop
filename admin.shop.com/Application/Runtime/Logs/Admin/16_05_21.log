@@ -1,0 +1,2211 @@
+[ 2016-05-21T17:59:34+08:00 ] 127.0.0.1 /Goods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `admin` WHERE `login_token` = 'b0f0360450747e10522fcbb19c56a570' LIMIT 1   [ RunTime:0.0156s ]
+SQL: UPDATE `admin` SET `login_token`='dc3c76a8040a4780272c27eb506e9f66' WHERE `id` = 15 [ RunTime:0.0781s ]
+SQL: select id, path from permission [ RunTime:0.0000s ]
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.281250s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.281250s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.140625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.140625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T17:59:35+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T17:59:45+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM goods g INNER JOIN goods_intro as i on g.id = i.goods_id  WHERE `id` = '3' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_gallery` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`path` FROM `goods_gallery` WHERE `goods_id` = '3'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.093750s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.093750s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T17:59:47+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463824786735
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] file_get_contents(D:\jingxishop\ThinkPHP\Library\Org\Util/Ueditor/config.json): failed to open stream: No such file or directory D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 28 行.
+
+[ 2016-05-21T17:59:47+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T17:59:47+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:04:26+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM goods g INNER JOIN goods_intro as i on g.id = i.goods_id  WHERE `id` = '3' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_gallery` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`path` FROM `goods_gallery` WHERE `goods_id` = '3'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.015625s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.015625s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:04:26+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463825066667
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.031250s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.031250s ]
+NOTIC: [2] file_get_contents(D:\jingxishop\ThinkPHP\Library\Org\Util/Ueditor/config.json): failed to open stream: No such file or directory D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 28 行.
+
+[ 2016-05-21T18:04:27+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:04:27+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:04:31+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=&start=0&noCache=1463825071269
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] file_get_contents(D:\jingxishop\ThinkPHP\Library\Org\Util/Ueditor/config.json): failed to open stream: No such file or directory D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 28 行.
+
+[ 2016-05-21T18:05:51+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM goods g INNER JOIN goods_intro as i on g.id = i.goods_id  WHERE `id` = '3' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_gallery` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`path` FROM `goods_gallery` WHERE `goods_id` = '3'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-21T18:05:51+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463825151759
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.015625s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.031250s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.031250s ]
+NOTIC: [2] file_get_contents(D:\jingxishop\ThinkPHP\Library\Org\Util/Ueditor/config.json): failed to open stream: No such file or directory D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 28 行.
+
+[ 2016-05-21T18:05:52+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0469s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:05:52+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:07:59+08:00 ] 127.0.0.1 /net/controller.ashx
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+ERR: 无法加载控制器:Net
+
+[ 2016-05-21T18:09:57+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM goods g INNER JOIN goods_intro as i on g.id = i.goods_id  WHERE `id` = '3' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_gallery` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`path` FROM `goods_gallery` WHERE `goods_id` = '3'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046875s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:09:58+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463825398458
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [2] file_get_contents(D:\jingxishop\ThinkPHP\Library\Org\Util/Ueditor/config.json): failed to open stream: No such file or directory D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 28 行.
+
+[ 2016-05-21T18:09:58+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:09:58+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:13:04+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=&start=0&noCache=1463825583641
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.031250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.046875s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.046875s ]
+NOTIC: [2] file_get_contents(D:\jingxishop\ThinkPHP\Library\Org\Util/Ueditor/config.json): failed to open stream: No such file or directory D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 28 行.
+
+[ 2016-05-21T18:15:15+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.3750s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0313s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM goods g INNER JOIN goods_intro as i on g.id = i.goods_id  WHERE `id` = '3' LIMIT 1   [ RunTime:0.0469s ]
+SQL: SHOW COLUMNS FROM `goods_gallery` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`path` FROM `goods_gallery` WHERE `goods_id` = '3'  [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.187500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.187500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:15:17+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463825716723
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.046875s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.046875s ]
+NOTIC: [2] file_get_contents(D:\jingxishop\ThinkPHP\Library\Org\Util/Ueditor/config.json): failed to open stream: No such file or directory D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 28 行.
+
+[ 2016-05-21T18:15:17+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:15:17+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0313s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:15:38+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=&start=0&noCache=1463825738245
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] file_get_contents(D:\jingxishop\ThinkPHP\Library\Org\Util/Ueditor/config.json): failed to open stream: No such file or directory D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 28 行.
+
+[ 2016-05-21T18:19:01+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.031250s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.031250s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM goods g INNER JOIN goods_intro as i on g.id = i.goods_id  WHERE `id` = '3' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_gallery` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`path` FROM `goods_gallery` WHERE `goods_id` = '3'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.156250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.156250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:19:02+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463825942377
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:19:03+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:19:03+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:19:48+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=listimage&start=0&size=20&noCache=1463825988235
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:21:48+08:00 ] 127.0.0.1 /index.php/Goods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.031250s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.031250s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.1250s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0625s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0625s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0469s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.2031s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.203125s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.203125s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:23:35+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM goods g INNER JOIN goods_intro as i on g.id = i.goods_id  WHERE `id` = '3' LIMIT 1   [ RunTime:0.0781s ]
+SQL: SHOW COLUMNS FROM `goods_gallery` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`path` FROM `goods_gallery` WHERE `goods_id` = '3'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078125s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.078125s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:23:36+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463826216669
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.015625s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:23:37+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:23:37+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:24:30+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=uploadimage&encode=utf-8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] array_map() expects parameter 1 to be a valid callback, array must have exactly two members D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 73 行.
+NOTIC: [8] Undefined index: imagePathFormat D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 76 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\jingxishop\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2016-05-21T18:24:30+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=uploadimage&encode=utf-8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [2] array_map() expects parameter 1 to be a valid callback, array must have exactly two members D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 73 行.
+NOTIC: [8] Undefined index: imagePathFormat D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 76 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\jingxishop\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2016-05-21T18:25:04+08:00 ] 127.0.0.1 /index.php/Goods/edit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0469s ]
+NOTIC: [8] Undefined index: validate D:\jingxishop\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\jingxishop\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `goods` SET `name`='格力空调!',`logo`='http://admin.shop.com/Uploads/20160514/5736fcc157bcf.jpg',`goods_category_id`='2',`brand_id`='4',`supplier_id`='2',`shop_price`='213.00',`market_price`='123123.00',`stock`='100',`goods_status`='3',`sort`='20',`is_on_sale`='1' WHERE `id` = '3' [ RunTime:0.1406s ]
+SQL: SHOW COLUMNS FROM `goods_intro` [ RunTime:0.0156s ]
+SQL: UPDATE `goods_intro` SET `content`='<p><img src=\"http://admin.shop.com/Uploads/20160521/5740375e0f424.jpg\" style=\"\" title=\"5740375e0f424.jpg\"/></p><p><img src=\"http://admin.shop.com/Uploads/20160521/5740375e3d090.jpg\" style=\"\" title=\"5740375e3d090.jpg\"/></p><p>撒大声地<br/></p>' WHERE `goods_id` = '3' [ RunTime:0.0469s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:25:05+08:00 ] 127.0.0.1 /index.php/Goods/index/nocache/1463826303.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0938s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0469s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-21T18:26:03+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.1250s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM goods g INNER JOIN goods_intro as i on g.id = i.goods_id  WHERE `id` = '4' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_gallery` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`path` FROM `goods_gallery` WHERE `goods_id` = '4'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: key D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078125s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.078125s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:26:16+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463826376237
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:26:16+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:26:17+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:26:36+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=uploadimage&encode=utf-8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] array_map() expects parameter 1 to be a valid callback, array must have exactly two members D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 73 行.
+NOTIC: [8] Undefined index: imagePathFormat D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 76 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\jingxishop\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2016-05-21T18:26:36+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=uploadimage&encode=utf-8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [2] array_map() expects parameter 1 to be a valid callback, array must have exactly two members D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 73 行.
+NOTIC: [8] Undefined index: imagePathFormat D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 76 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\jingxishop\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2016-05-21T18:26:45+08:00 ] 127.0.0.1 /index.php/Goods/edit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+NOTIC: [8] Undefined index: validate D:\jingxishop\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\jingxishop\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `goods` SET `name`='格力jj',`logo`='http://admin.shop.com/Uploads/20160514/5736fcb716e36.png',`goods_category_id`='2',`brand_id`='2',`supplier_id`='3',`shop_price`='213.00',`market_price`='123123.00',`stock`='100',`goods_status`='3',`sort`='20',`is_on_sale`='1' WHERE `id` = '4' [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `goods_intro` [ RunTime:0.0000s ]
+SQL: UPDATE `goods_intro` SET `content`='<p><img src=\"http://admin.shop.com/Uploads/20160521/574037dc487ab.jpg\" style=\"\" title=\"574037dc487ab.jpg\"/></p><p><br/></p><p><img src=\"http://admin.shop.com/Uploads/20160521/574037dc53ec6.jpg\" style=\"\" title=\"574037dc53ec6.jpg\"/></p><p>cccc<br/></p>' WHERE `goods_id` = '4' [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-21T18:26:46+08:00 ] 127.0.0.1 /index.php/Goods/index/nocache/1463826405.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0313s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-21T18:26:55+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM goods g INNER JOIN goods_intro as i on g.id = i.goods_id  WHERE `id` = '3' LIMIT 1   [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `goods_gallery` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`path` FROM `goods_gallery` WHERE `goods_id` = '3'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:26:56+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463826416129
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:26:56+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:26:56+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:27:02+08:00 ] 127.0.0.1 /index.php/Upload/upload.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\jingxishop\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2016-05-21T18:27:10+08:00 ] 127.0.0.1 /index.php/Goods/edit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+NOTIC: [8] Undefined index: validate D:\jingxishop\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\jingxishop\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `goods` SET `name`='格力空调!',`logo`='http://admin.shop.com/Uploads/20160521/574037f6a7d8c.jpg',`goods_category_id`='2',`brand_id`='4',`supplier_id`='2',`shop_price`='213.00',`market_price`='123123.00',`stock`='100',`goods_status`='3',`sort`='20',`is_on_sale`='1' WHERE `id` = '3' [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `goods_intro` [ RunTime:0.0156s ]
+SQL: UPDATE `goods_intro` SET `content`='<p><img src=\"http://admin.shop.com/Uploads/20160521/5740375e0f424.jpg\" style=\"\" title=\"5740375e0f424.jpg\"/></p><p><img src=\"http://admin.shop.com/Uploads/20160521/5740375e3d090.jpg\" style=\"\" title=\"5740375e3d090.jpg\"/></p><p>撒大声地<br/></p>' WHERE `goods_id` = '3' [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:27:11+08:00 ] 127.0.0.1 /index.php/Goods/index/nocache/1463826429.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-21T18:27:13+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM goods g INNER JOIN goods_intro as i on g.id = i.goods_id  WHERE `id` = '4' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_gallery` [ RunTime:0.0313s ]
+SQL: SELECT `id`,`path` FROM `goods_gallery` WHERE `goods_id` = '4'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: key D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:27:14+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463826434380
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.062500s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.062500s ]
+
+[ 2016-05-21T18:27:14+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:27:15+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:27:19+08:00 ] 127.0.0.1 /index.php/Upload/upload.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\jingxishop\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2016-05-21T18:27:24+08:00 ] 127.0.0.1 /index.php/Goods/edit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0313s ]
+NOTIC: [8] Undefined index: validate D:\jingxishop\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\jingxishop\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `goods` SET `name`='格力jj',`logo`='http://admin.shop.com/Uploads/20160521/57403807e1113.jpg',`goods_category_id`='2',`brand_id`='2',`supplier_id`='3',`shop_price`='213.00',`market_price`='123123.00',`stock`='100',`goods_status`='3',`sort`='20',`is_on_sale`='1' WHERE `id` = '4' [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `goods_intro` [ RunTime:0.0156s ]
+SQL: UPDATE `goods_intro` SET `content`='<p><img src=\"http://admin.shop.com/Uploads/20160521/574037dc487ab.jpg\" style=\"\" title=\"574037dc487ab.jpg\"/></p><p><br/></p><p><img src=\"http://admin.shop.com/Uploads/20160521/574037dc53ec6.jpg\" style=\"\" title=\"574037dc53ec6.jpg\"/></p><p>cccc<br/></p>' WHERE `goods_id` = '4' [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:27:25+08:00 ] 127.0.0.1 /index.php/Goods/index/nocache/1463826444.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:27:29+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM goods g INNER JOIN goods_intro as i on g.id = i.goods_id  WHERE `id` = '4' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_gallery` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`path` FROM `goods_gallery` WHERE `goods_id` = '4'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: key D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:27:30+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463826450553
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-21T18:27:31+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:27:31+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:27:34+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM goods g INNER JOIN goods_intro as i on g.id = i.goods_id  WHERE `id` = '4' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_gallery` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`path` FROM `goods_gallery` WHERE `goods_id` = '4'  [ RunTime:0.0781s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: key D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:27:35+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463826454891
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:27:35+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:27:35+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:27:38+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0313s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM goods g INNER JOIN goods_intro as i on g.id = i.goods_id  WHERE `id` = '5' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_gallery` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`path` FROM `goods_gallery` WHERE `goods_id` = '5'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:27:39+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463826459679
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-21T18:27:40+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:27:40+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0313s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:27:56+08:00 ] 127.0.0.1 /index.php/Upload/upload.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\jingxishop\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2016-05-21T18:28:05+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=listimage&start=0&size=20&noCache=1463826485373
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-21T18:28:42+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=uploadimage&encode=utf-8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] array_map() expects parameter 1 to be a valid callback, array must have exactly two members D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 73 行.
+NOTIC: [8] Undefined index: imagePathFormat D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 76 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\jingxishop\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2016-05-21T18:28:43+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=uploadimage&encode=utf-8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [2] array_map() expects parameter 1 to be a valid callback, array must have exactly two members D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 73 行.
+NOTIC: [8] Undefined index: imagePathFormat D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 76 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\jingxishop\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2016-05-21T18:28:46+08:00 ] 127.0.0.1 /index.php/Goods/edit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: validate D:\jingxishop\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\jingxishop\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `goods` SET `name`='小太阳',`logo`='http://admin.shop.com/Uploads/20160521/5740382c3567e.jpg',`goods_category_id`='17',`brand_id`='4',`supplier_id`='2',`shop_price`='132.00',`market_price`='134.00',`stock`='100',`goods_status`='3',`sort`='20',`is_on_sale`='1' WHERE `id` = '5' [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `goods_intro` [ RunTime:0.0156s ]
+SQL: UPDATE `goods_intro` SET `content`='<p><img src=\"http://admin.shop.com/Uploads/20160521/5740385ae4e1c.jpg\" style=\"\" title=\"5740385ae4e1c.jpg\"/></p><p><img src=\"http://admin.shop.com/Uploads/20160521/5740385b00000.jpg\" style=\"\" title=\"5740385b00000.jpg\"/></p><p>AC阿萨德才<br/></p>' WHERE `goods_id` = '5' [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:28:48+08:00 ] 127.0.0.1 /index.php/Goods/index/nocache/1463826526.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0313s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:28:52+08:00 ] 127.0.0.1 /index.php/Goods/delete/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0313s ]
+SQL: UPDATE `goods` SET `status`='0' WHERE `id` = '7' [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:28:53+08:00 ] 127.0.0.1 /index.php/Goods/index/nocache/1463826532.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:28:56+08:00 ] 127.0.0.1 /index.php/Goods/delete/id/8.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: UPDATE `goods` SET `status`='0' WHERE `id` = '8' [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:28:57+08:00 ] 127.0.0.1 /index.php/Goods/index/nocache/1463826536.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-21T18:29:05+08:00 ] 127.0.0.1 /index.php/Goods/delete/id/9.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: UPDATE `goods` SET `status`='0' WHERE `id` = '9' [ RunTime:0.0781s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:29:06+08:00 ] 127.0.0.1 /index.php/Goods/index/nocache/1463826545.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:29:09+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM goods g INNER JOIN goods_intro as i on g.id = i.goods_id  WHERE `id` = '6' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_gallery` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`path` FROM `goods_gallery` WHERE `goods_id` = '6'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:29:10+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463826550107
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:29:10+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:29:11+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:29:17+08:00 ] 127.0.0.1 /index.php/Upload/upload.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\jingxishop\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2016-05-21T18:29:33+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=uploadimage&encode=utf-8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [2] array_map() expects parameter 1 to be a valid callback, array must have exactly two members D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 73 行.
+NOTIC: [8] Undefined index: imagePathFormat D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 76 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\jingxishop\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2016-05-21T18:29:33+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=uploadimage&encode=utf-8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] array_map() expects parameter 1 to be a valid callback, array must have exactly two members D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 73 行.
+NOTIC: [8] Undefined index: imagePathFormat D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 76 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\jingxishop\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2016-05-21T18:29:36+08:00 ] 127.0.0.1 /index.php/Goods/edit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+NOTIC: [8] Undefined index: validate D:\jingxishop\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\jingxishop\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `goods` SET `name`='乐视',`logo`='http://admin.shop.com/Uploads/20160521/5740387dec82e.jpg',`goods_category_id`='1',`brand_id`='4',`supplier_id`='2',`shop_price`='13241.00',`market_price`='13242134.00',`stock`='50',`goods_status`='2',`sort`='20',`is_on_sale`='1' WHERE `id` = '6' [ RunTime:0.0313s ]
+SQL: SHOW COLUMNS FROM `goods_intro` [ RunTime:0.0000s ]
+SQL: UPDATE `goods_intro` SET `content`='<p><img src=\"http://admin.shop.com/Uploads/20160521/5740388dbaeb9.jpg\" style=\"\" title=\"5740388dbaeb9.jpg\"/></p><p><img src=\"http://admin.shop.com/Uploads/20160521/5740388dc65d4.jpg\" style=\"\" title=\"5740388dc65d4.jpg\"/></p><p>乐视电视...<br/></p>' WHERE `goods_id` = '6' [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046875s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:29:37+08:00 ] 127.0.0.1 /index.php/Goods/index/nocache/1463826576.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046875s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:29:39+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/21.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM goods g INNER JOIN goods_intro as i on g.id = i.goods_id  WHERE `id` = '21' LIMIT 1   [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `goods_gallery` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`path` FROM `goods_gallery` WHERE `goods_id` = '21'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-21T18:30:54+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/21.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM goods g INNER JOIN goods_intro as i on g.id = i.goods_id  WHERE `id` = '21' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_gallery` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`path` FROM `goods_gallery` WHERE `goods_id` = '21'  [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-21T18:31:18+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/21.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM goods g INNER JOIN goods_intro as i on g.id = i.goods_id  WHERE `id` = '21' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_gallery` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`path` FROM `goods_gallery` WHERE `goods_id` = '21'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046875s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-21T18:31:25+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/23.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM goods g INNER JOIN goods_intro as i on g.id = i.goods_id  WHERE `id` = '23' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_gallery` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`path` FROM `goods_gallery` WHERE `goods_id` = '23'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046875s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:31:25+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463826685832
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:31:26+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:31:26+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:31:30+08:00 ] 127.0.0.1 /index.php/Goods/delete/id/21.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0313s ]
+SQL: UPDATE `goods` SET `status`='0' WHERE `id` = '21' [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:31:32+08:00 ] 127.0.0.1 /index.php/Goods/index/nocache/1463826690.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046875s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:31:33+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/23.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0313s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM goods g INNER JOIN goods_intro as i on g.id = i.goods_id  WHERE `id` = '23' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_gallery` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`path` FROM `goods_gallery` WHERE `goods_id` = '23'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046875s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-21T18:31:34+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463826694644
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:31:35+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:31:35+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-21T18:31:48+08:00 ] 127.0.0.1 /index.php/Upload/upload.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\jingxishop\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2016-05-21T18:32:02+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=uploadimage&encode=utf-8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] array_map() expects parameter 1 to be a valid callback, array must have exactly two members D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 73 行.
+NOTIC: [8] Undefined index: imagePathFormat D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 76 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\jingxishop\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2016-05-21T18:32:02+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=uploadimage&encode=utf-8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] array_map() expects parameter 1 to be a valid callback, array must have exactly two members D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 73 行.
+NOTIC: [8] Undefined index: imagePathFormat D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 76 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\jingxishop\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2016-05-21T18:32:02+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=uploadimage&encode=utf-8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [2] array_map() expects parameter 1 to be a valid callback, array must have exactly two members D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 73 行.
+NOTIC: [8] Undefined index: imagePathFormat D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 76 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\jingxishop\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2016-05-21T18:32:10+08:00 ] 127.0.0.1 /index.php/Goods/edit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+NOTIC: [8] Undefined index: validate D:\jingxishop\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\jingxishop\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `goods` SET `name`='t恤',`logo`='http://admin.shop.com/Uploads/20160521/5740391440d99.jpg',`goods_category_id`='19',`brand_id`='2',`supplier_id`='1',`shop_price`='87.00',`market_price`='89.00',`stock`='50',`goods_status`='1',`sort`='20',`is_on_sale`='1' WHERE `id` = '23' [ RunTime:0.0469s ]
+SQL: SHOW COLUMNS FROM `goods_intro` [ RunTime:0.0156s ]
+SQL: UPDATE `goods_intro` SET `content`='<p><img src=\"http://admin.shop.com/Uploads/20160521/574039228583b.jpg\" style=\"\" title=\"574039228583b.jpg\"/></p><p><img src=\"http://admin.shop.com/Uploads/20160521/5740392290f56.jpg\" style=\"\" title=\"5740392290f56.jpg\"/></p><p><img src=\"http://admin.shop.com/Uploads/20160521/574039229c671.jpg\" style=\"\" title=\"574039229c671.jpg\"/></p><p><br/></p>' WHERE `goods_id` = '23' [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-21T18:32:11+08:00 ] 127.0.0.1 /index.php/Goods/index/nocache/1463826730.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

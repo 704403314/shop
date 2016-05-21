@@ -13,7 +13,7 @@ namespace Admin\Controller;
  * @author qingf
  */
 class EditorController extends \Think\Controller{
-    
+
     /**
      * ueditor后台服务部分.
      * 比如获取配置

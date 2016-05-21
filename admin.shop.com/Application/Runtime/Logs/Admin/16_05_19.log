@@ -1,0 +1,3008 @@
+[ 2016-05-19T09:10:28+08:00 ] 127.0.0.1 /Goods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.031250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1406s ]
+SQL: SELECT * FROM `admin` WHERE `login_token` = '35ccdb6db10bd1a9a1bf2626bc961cb6' LIMIT 1   [ RunTime:0.0313s ]
+SQL: UPDATE `admin` SET `login_token`='105b0867d818b54d77103d30336b044f' WHERE `id` = 15 [ RunTime:0.0313s ]
+SQL: select id, path from permission [ RunTime:0.0469s ]
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.593750s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.593750s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.2188s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0781s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0625s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0313s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.156250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.156250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-19T09:10:29+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:11:10+08:00 ] 127.0.0.1 /index.php/Goods/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0469s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 60 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 66 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 74 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 76 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 91 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 97 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 104 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 110 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 151 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 165 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 181 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 221 行.
+NOTIC: [8] Undefined variable: key D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 302 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:11:15+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463620275142
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+
+[ 2016-05-19T09:11:16+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-19T09:11:16+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:11:26+08:00 ] 127.0.0.1 /index.php/Upload/upload.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+
+[ 2016-05-19T09:15:48+08:00 ] 127.0.0.1 /index.php/Goods/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 60 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 66 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 74 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 76 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 91 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 97 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 104 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 110 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 151 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 165 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 181 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 224 行.
+NOTIC: [8] Undefined variable: key D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:15:50+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:15:50+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:15:52+08:00 ] 127.0.0.1 /index.php/Upload/upload.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+
+[ 2016-05-19T09:16:31+08:00 ] 127.0.0.1 /index.php/Goods/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 60 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 66 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 74 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 76 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 91 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 97 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 104 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 110 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 151 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 165 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 181 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 224 行.
+NOTIC: [8] Undefined variable: key D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:16:32+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463620592213
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] file_get_contents(D:\jingxishop\ThinkPHP\Library\Org\Util/Ueditor/config.json): failed to open stream: No such file or directory D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 28 行.
+
+[ 2016-05-19T09:16:32+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:16:32+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:16:37+08:00 ] 127.0.0.1 /index.php/Upload/upload.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\jingxishop\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2016-05-19T09:18:20+08:00 ] 127.0.0.1 /index.php/Goods/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 60 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 66 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 74 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 76 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 91 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 97 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 104 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 110 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 151 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 165 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 181 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 224 行.
+NOTIC: [8] Undefined variable: key D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:18:20+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463620700770
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+
+[ 2016-05-19T09:18:21+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:18:21+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:18:40+08:00 ] 127.0.0.1 /index.php/Upload/upload.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\jingxishop\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2016-05-19T09:18:49+08:00 ] 127.0.0.1 /index.php/Goods/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 60 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 66 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 74 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 76 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 91 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 97 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 104 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 110 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 151 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 165 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 181 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 224 行.
+NOTIC: [8] Undefined variable: key D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:18:50+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463620730578
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+
+[ 2016-05-19T09:18:51+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:18:51+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:18:52+08:00 ] 127.0.0.1 /index.php/Upload/upload.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+
+[ 2016-05-19T09:19:12+08:00 ] 127.0.0.1 /index.php/Goods/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 60 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 66 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 74 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 76 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 91 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 97 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 104 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 110 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 151 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 165 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 181 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 224 行.
+NOTIC: [8] Undefined variable: key D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:19:13+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463620753290
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] file_get_contents(D:\jingxishop\ThinkPHP\Library\Org\Util/Ueditor/config.json): failed to open stream: No such file or directory D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 28 行.
+
+[ 2016-05-19T09:19:13+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:19:13+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:19:24+08:00 ] 127.0.0.1 /index.php/Upload/upload.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\jingxishop\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2016-05-19T09:19:33+08:00 ] 127.0.0.1 /index.php/Goods/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 60 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 66 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 74 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 76 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 91 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 97 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 104 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 110 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 151 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 165 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 181 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 224 行.
+NOTIC: [8] Undefined variable: key D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:19:34+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463620774631
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+
+[ 2016-05-19T09:19:35+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:19:35+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:19:53+08:00 ] 127.0.0.1 /index.php/Goods/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 60 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 66 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 74 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 76 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 91 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 97 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 104 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 110 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 151 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 165 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 181 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 224 行.
+NOTIC: [8] Undefined variable: key D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:19:53+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463620793873
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+
+[ 2016-05-19T09:19:54+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:19:54+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:20:00+08:00 ] 127.0.0.1 /index.php/Goods/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.125000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.125000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.031250s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.031250s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 60 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 66 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 74 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 76 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 91 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 97 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 104 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 110 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 151 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 165 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 181 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 224 行.
+NOTIC: [8] Undefined variable: key D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:20:02+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:20:02+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:21:17+08:00 ] 127.0.0.1 /index.php/Goods/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 60 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 66 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 74 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 76 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 91 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 97 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 104 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 110 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 151 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 165 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 181 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 224 行.
+NOTIC: [8] Undefined variable: key D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-19T09:21:17+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463620877832
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+
+[ 2016-05-19T09:21:18+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:21:18+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:27:02+08:00 ] 127.0.0.1 /index.php/Goods/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.203125s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.203125s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 60 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 66 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 74 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 76 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 91 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 97 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 104 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 110 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 151 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 165 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 181 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 224 行.
+NOTIC: [8] Undefined variable: key D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-19T09:27:03+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463621223709
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [2] file_get_contents(D:\jingxishop\ThinkPHP\Library\Org\Util/Ueditor/config.json): failed to open stream: No such file or directory D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 28 行.
+
+[ 2016-05-19T09:27:04+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T09:27:04+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:06:59+08:00 ] 127.0.0.1 /Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `admin` WHERE `login_token` = '105b0867d818b54d77103d30336b044f' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `admin` SET `login_token`='51e9f6ed03ab1da6d316f57cd57d00c2' WHERE `id` = 15 [ RunTime:0.0000s ]
+SQL: select id, path from permission [ RunTime:0.0000s ]
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.031250s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.031250s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:00+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:11+08:00 ] 127.0.0.1 /Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:12+08:00 ] 127.0.0.1 /Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-19T11:07:13+08:00 ] 127.0.0.1 /Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:14+08:00 ] 127.0.0.1 /Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:15+08:00 ] 127.0.0.1 /Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:16+08:00 ] 127.0.0.1 /Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:17+08:00 ] 127.0.0.1 /Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:18+08:00 ] 127.0.0.1 /Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:19+08:00 ] 127.0.0.1 /Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:20+08:00 ] 127.0.0.1 /Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:22+08:00 ] 127.0.0.1 /Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:23+08:00 ] 127.0.0.1 /Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:24+08:00 ] 127.0.0.1 /Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:25+08:00 ] 127.0.0.1 /Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:26+08:00 ] 127.0.0.1 /Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:27+08:00 ] 127.0.0.1 /Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:27+08:00 ] 127.0.0.1 /Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:28+08:00 ] 127.0.0.1 /Goods/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:30+08:00 ] 127.0.0.1 /index.php/Goods/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 60 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 66 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 74 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 76 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 91 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 97 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 104 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 110 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 151 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 165 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 181 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 224 行.
+NOTIC: [8] Undefined variable: key D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046875s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:32+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463627251906
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [2] file_get_contents(D:\jingxishop\ThinkPHP\Library\Org\Util/Ueditor/config.json): failed to open stream: No such file or directory D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 28 行.
+
+[ 2016-05-19T11:07:32+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:32+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:36+08:00 ] 127.0.0.1 /index.php/Goods/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 60 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 66 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 74 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 76 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 91 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 97 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 104 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 110 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 151 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 165 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 181 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 224 行.
+NOTIC: [8] Undefined variable: key D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046875s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:07:37+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1463627256999
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [2] file_get_contents(D:\jingxishop\ThinkPHP\Library\Org\Util/Ueditor/config.json): failed to open stream: No such file or directory D:\jingxishop\ThinkPHP\Library\Org\Util\Ueditor.class.php 第 28 行.
+
+[ 2016-05-19T11:07:37+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-19T11:07:37+08:00 ] 127.0.0.1 /index.php/Goods/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:08:22+08:00 ] 127.0.0.1 /Brand/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `brand` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\e52c654f60b5fa29d1e5544b32e87261.php 第 47 行.
+NOTIC: [8] Undefined variable: list D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\e52c654f60b5fa29d1e5544b32e87261.php 第 47 行.
+NOTIC: [8] Undefined variable: list D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\e52c654f60b5fa29d1e5544b32e87261.php 第 47 行.
+NOTIC: [8] Undefined variable: list D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\e52c654f60b5fa29d1e5544b32e87261.php 第 47 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046875s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:08:24+08:00 ] 127.0.0.1 /index.php/Brand/add/nocache/1463627302.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+
+[ 2016-05-19T11:09:06+08:00 ] 127.0.0.1 /Goods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:09:10+08:00 ] 127.0.0.1 /permission
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `permission` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `permission` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046875s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:09:20+08:00 ] 127.0.0.1 /index.php/Permission/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.015625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `permission` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `permission` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\139fb02e20b85fa87179f6f37225976a.php 第 38 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\139fb02e20b85fa87179f6f37225976a.php 第 44 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\139fb02e20b85fa87179f6f37225976a.php 第 64 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\139fb02e20b85fa87179f6f37225976a.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078125s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.078125s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:10:50+08:00 ] 127.0.0.1 /index.php/Permission/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `permission` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: validate D:\jingxishop\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `permission` WHERE `name` = '编辑商品分类' LIMIT 1   [ RunTime:0.0156s ]
+NOTIC: [8] Undefined index: auto D:\jingxishop\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [4096] Argument 2 passed to Admin\Logic\NestedSetsMysqlLogic::getRow() must be of the type array, string given, called in D:\jingxishop\admin.shop.com\Application\Admin\Service\NestedSets.class.php on line 572 and defined D:\jingxishop\admin.shop.com\Application\Admin\Logic\NestedSetsMysqlLogic.class.php 第 181 行.
+SQL: SELECT parent_id, lft, rght, level FROM permission WHERE id = 0 [ RunTime:0.0000s ]
+NOTIC: [4096] Argument 2 passed to Admin\Logic\NestedSetsMysqlLogic::getOne() must be of the type array, string given, called in D:\jingxishop\admin.shop.com\Application\Admin\Service\NestedSets.class.php on line 195 and defined D:\jingxishop\admin.shop.com\Application\Admin\Logic\NestedSetsMysqlLogic.class.php 第 228 行.
+SQL: SELECT MAX(rght) FROM permission [ RunTime:0.0625s ]
+NOTIC: [2048] Only variables should be passed by reference D:\jingxishop\admin.shop.com\Application\Admin\Logic\NestedSetsMysqlLogic.class.php 第 244 行.
+NOTIC: [4096] Argument 2 passed to Admin\Logic\NestedSetsMysqlLogic::query() must be of the type array, string given, called in D:\jingxishop\admin.shop.com\Application\Admin\Service\NestedSets.class.php on line 224 and defined D:\jingxishop\admin.shop.com\Application\Admin\Logic\NestedSetsMysqlLogic.class.php 第 62 行.
+SQL: UPDATE permission SET rght = rght + 2, lft = IF(lft >= 41, lft + 2, lft) WHERE rght >= 41 [ RunTime:0.0156s ]
+NOTIC: [4096] Argument 2 passed to Admin\Logic\NestedSetsMysqlLogic::insert() must be of the type array, string given, called in D:\jingxishop\admin.shop.com\Application\Admin\Service\NestedSets.class.php on line 232 and defined D:\jingxishop\admin.shop.com\Application\Admin\Logic\NestedSetsMysqlLogic.class.php 第 92 行.
+SQL: INSERT INTO permission SET `name`="编辑商品分类",`path`="Admin/GoodsCategory/edit",`parent_id`="0",`sort`="50",`intro`="",`lft`="41",`rght`="42",`level`="1" [ RunTime:0.0313s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046875s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:10:51+08:00 ] 127.0.0.1 /index.php/Permission/index/nocache/1463627449.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `permission` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `permission` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:10:54+08:00 ] 127.0.0.1 /index.php/Permission/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `permission` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `permission` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\139fb02e20b85fa87179f6f37225976a.php 第 38 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\139fb02e20b85fa87179f6f37225976a.php 第 44 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\139fb02e20b85fa87179f6f37225976a.php 第 64 行.
+NOTIC: [8] Undefined variable: row D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\139fb02e20b85fa87179f6f37225976a.php 第 69 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:11:03+08:00 ] 127.0.0.1 /index.php/Brand/add/nocache/1463627302.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+
+[ 2016-05-19T11:11:05+08:00 ] 127.0.0.1 /Brand/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `brand` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\e52c654f60b5fa29d1e5544b32e87261.php 第 47 行.
+NOTIC: [8] Undefined variable: list D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\e52c654f60b5fa29d1e5544b32e87261.php 第 47 行.
+NOTIC: [8] Undefined variable: list D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\e52c654f60b5fa29d1e5544b32e87261.php 第 47 行.
+NOTIC: [8] Undefined variable: list D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\e52c654f60b5fa29d1e5544b32e87261.php 第 47 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-19T11:11:06+08:00 ] 127.0.0.1 /index.php/Brand/add/nocache/1463627465.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+
+[ 2016-05-19T11:11:21+08:00 ] 127.0.0.1 /Brand/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `brand` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\e52c654f60b5fa29d1e5544b32e87261.php 第 47 行.
+NOTIC: [8] Undefined variable: list D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\e52c654f60b5fa29d1e5544b32e87261.php 第 47 行.
+NOTIC: [8] Undefined variable: list D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\e52c654f60b5fa29d1e5544b32e87261.php 第 47 行.
+NOTIC: [8] Undefined variable: list D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\e52c654f60b5fa29d1e5544b32e87261.php 第 47 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T11:11:23+08:00 ] 127.0.0.1 /index.php/Brand/add/nocache/1463627480.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+
+[ 2016-05-19T11:11:26+08:00 ] 127.0.0.1 /index.php/Brand/add/nocache/1463627480.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+
+[ 2016-05-19T18:37:40+08:00 ] 127.0.0.1 /Public/css/header.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:37:40+08:00 ] 127.0.0.1 /Public/css/base.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.015625s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:37:40+08:00 ] 127.0.0.1 /Public/css/global.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:37:40+08:00 ] 127.0.0.1 /Public/css/login.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:37:40+08:00 ] 127.0.0.1 /Public/css/footer.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:37:41+08:00 ] 127.0.0.1 /Public/images/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-19T18:37:41+08:00 ] 127.0.0.1 /Public/images/kexin.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:37:41+08:00 ] 127.0.0.1 /Public/images/xin.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:37:41+08:00 ] 127.0.0.1 /Public/images/beian.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:37:41+08:00 ] 127.0.0.1 /Public/images/police.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:39:12+08:00 ] 127.0.0.1 /Public/css/base.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:39:12+08:00 ] 127.0.0.1 /Public/css/global.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:39:12+08:00 ] 127.0.0.1 /Public/css/login.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:39:12+08:00 ] 127.0.0.1 /Public/css/footer.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:39:12+08:00 ] 127.0.0.1 /Public/css/header.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:39:12+08:00 ] 127.0.0.1 /Public/images/kexin.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:39:12+08:00 ] 127.0.0.1 /Public/images/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:39:12+08:00 ] 127.0.0.1 /Public/images/police.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:39:12+08:00 ] 127.0.0.1 /Public/images/xin.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-19T18:39:12+08:00 ] 127.0.0.1 /Public/images/beian.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:39:15+08:00 ] 127.0.0.1 /Public/css/global.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:39:15+08:00 ] 127.0.0.1 /Public/css/header.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:39:15+08:00 ] 127.0.0.1 /Public/css/footer.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:39:15+08:00 ] 127.0.0.1 /Public/css/base.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:39:15+08:00 ] 127.0.0.1 /Public/css/login.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:39:15+08:00 ] 127.0.0.1 /Public/images/kexin.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-19T18:39:15+08:00 ] 127.0.0.1 /Public/images/police.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:39:15+08:00 ] 127.0.0.1 /Public/images/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:39:15+08:00 ] 127.0.0.1 /Public/images/beian.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-19T18:39:15+08:00 ] 127.0.0.1 /Public/images/xin.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-19T18:39:17+08:00 ] 127.0.0.1 /Public/css/login.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:39:17+08:00 ] 127.0.0.1 /Public/css/footer.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:39:17+08:00 ] 127.0.0.1 /Public/css/header.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:39:17+08:00 ] 127.0.0.1 /Public/css/base.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:39:17+08:00 ] 127.0.0.1 /Public/css/global.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:39:17+08:00 ] 127.0.0.1 /Public/images/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-19T18:39:17+08:00 ] 127.0.0.1 /Public/images/beian.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-19T18:39:17+08:00 ] 127.0.0.1 /Public/images/police.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:39:17+08:00 ] 127.0.0.1 /Public/images/xin.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:39:17+08:00 ] 127.0.0.1 /Public/images/kexin.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:39:36+08:00 ] 127.0.0.1 /Public/css/login.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:39:36+08:00 ] 127.0.0.1 /Public/css/base.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:39:36+08:00 ] 127.0.0.1 /Public/css/header.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:39:36+08:00 ] 127.0.0.1 /Public/css/global.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:39:36+08:00 ] 127.0.0.1 /Public/css/footer.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:40:27+08:00 ] 127.0.0.1 /Public/css/header.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:40:27+08:00 ] 127.0.0.1 /Public/css/footer.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:40:27+08:00 ] 127.0.0.1 /Public/css/base.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:40:27+08:00 ] 127.0.0.1 /Public/css/global.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:40:27+08:00 ] 127.0.0.1 /Public/css/login.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:40:28+08:00 ] 127.0.0.1 /Public/images/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:40:28+08:00 ] 127.0.0.1 /Public/images/beian.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:40:28+08:00 ] 127.0.0.1 /Public/images/xin.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:40:28+08:00 ] 127.0.0.1 /Public/images/police.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:40:28+08:00 ] 127.0.0.1 /Public/images/kexin.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-19T18:41:31+08:00 ] 127.0.0.1 /Public/images/police.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:41:31+08:00 ] 127.0.0.1 /Public/images/kexin.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-19T18:41:31+08:00 ] 127.0.0.1 /Public/images/beian.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:41:31+08:00 ] 127.0.0.1 /Public/images/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:41:38+08:00 ] 127.0.0.1 /Public/images/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:44:13+08:00 ] 127.0.0.1 /Public/images/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:44:14+08:00 ] 127.0.0.1 /Public/css/base.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:44:14+08:00 ] 127.0.0.1 /Public/css/footer.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:44:14+08:00 ] 127.0.0.1 /Public/css/header.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:44:14+08:00 ] 127.0.0.1 /Public/css/global.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:44:14+08:00 ] 127.0.0.1 /Public/css/login.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:44:14+08:00 ] 127.0.0.1 /Public/images/police.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:44:14+08:00 ] 127.0.0.1 /Public/images/beian.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-19T18:44:14+08:00 ] 127.0.0.1 /Public/images/xin.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-19T18:44:14+08:00 ] 127.0.0.1 /Public/images/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:44:14+08:00 ] 127.0.0.1 /Public/images/kexin.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-05-19T18:44:30+08:00 ] 127.0.0.1 /Public/css/footer.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:44:30+08:00 ] 127.0.0.1 /Public/css/login.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.031250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.031250s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:44:30+08:00 ] 127.0.0.1 /Public/css/header.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:44:30+08:00 ] 127.0.0.1 /Public/css/global.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:44:30+08:00 ] 127.0.0.1 /Public/css/base.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-05-19T18:44:30+08:00 ] 127.0.0.1 /Public/images/kexin.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:44:30+08:00 ] 127.0.0.1 /Public/images/beian.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:44:30+08:00 ] 127.0.0.1 /Public/images/police.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:44:30+08:00 ] 127.0.0.1 /Public/images/xin.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-19T18:44:30+08:00 ] 127.0.0.1 /Public/images/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+

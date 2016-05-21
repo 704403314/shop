@@ -20,7 +20,10 @@ class IndexController extends Controller {
      * 渲染菜单
      */
     public function menu(){
+        $menus = D('Menu')->getMenus();
+        $this->assign('menus',$menus);
         $this->display();
+
     }
 
     /**

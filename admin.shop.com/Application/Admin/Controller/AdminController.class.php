@@ -136,7 +136,40 @@ class AdminController extends Controller{
      * 退出功能
      */
     public function logout(){
+        // 获取管理员信息
+        $admin_info = login();
+        $data=[
+          'id'=>  $admin_info['id'],
+            'login_token'=>'',
+        ];
+        // 删除令牌
+        if($this->_model->setField($data) ===false){
+            $this->error($this->_model->getError());
+        }
+
         session(null);
+        cookie(null);
         $this->success('退出成功',U('login'));
+    }
+
+    /**
+     * 修改密码
+     */
+    public function changePwd(){
+        if(IS_POST){
+            // 自动验证
+            if($this->_model->create('','login') === false){
+                $this->error($this->_model->getError());
+            }
+            // 判断插入
+            if($this->_model->changePwd() === false){
+                $this->error($this->_model->getError());
+            }
+
+            $this->success('修改成功',U('Index/main',['nocache'=>NOW_TIME]));
+        }else{
+//            dump(123);exit;
+            $this->display();
+        }
     }
 }

@@ -21,7 +21,7 @@ class AdminModel extends Model{
         ['repassword', 'password','两次密码不一致', self::EXISTS_VALIDATE,'confirm',self::MODEL_BOTH],
         ['email', 'email','邮箱不合法', self::EXISTS_VALIDATE,'',self::MODEL_INSERT],
 
-//        ['captcha', 'check_verify','验证码不正确', self::EXISTS_VALIDATE,'callback','login'],
+        //['captcha', 'check_verify','验证码不正确', self::EXISTS_VALIDATE,'callback','login'],
         ['username', 'require','用户名不能为空', self::EXISTS_VALIDATE,'login',],
         ['password', 'require','密码不能为空', self::EXISTS_VALIDATE,'','login'],
     ];
@@ -32,6 +32,42 @@ class AdminModel extends Model{
         ['add_time', NOW_TIME, self::MODEL_INSERT],
         ['salt','\Org\Util\String::randString',self::MODEL_BOTH,'function',6],
     ];
+
+
+    /**
+     * 修改密码
+     */
+    public function changePwd(){
+//        dump($this->data);exit;
+        // 先判断新密码和旧密码是否一样
+        $oldpwd = I('post.oldpwd');
+        if($oldpwd==$this->data['password']){
+            $this->error = '新旧密码不能一样';
+            return false;
+        }
+        $admin_info = login();
+        // 对新密码加盐加密
+        $new_pwd = salt_mcrypt($oldpwd,$admin_info['salt']);
+        // 判断旧密码是否正确
+        if($new_pwd != $admin_info['password']){
+            $this->error = '旧密码不正确';
+            return false;
+        }
+        $data = [
+            'id'=> $admin_info['id'],
+            'password'=>salt_mcrypt($this->data['password'],$this->data['salt']),
+            'salt'=>$this->data['salt']
+        ];
+        $admin_info = array_merge($admin_info,$data);
+        // 将新密码保存到session中
+        login($admin_info);
+
+        // 将新密码保存到数据库
+
+        return $this->setField($data);
+
+
+    }
 
     /**
      * 验证验证码
@@ -76,12 +112,76 @@ class AdminModel extends Model{
                 'last_login_ip'=>get_client_ip(),
             ];
             $this->setField($data);
-            session('ADMIN_INFO',$admin_info);
+            login($admin_info);
             // 获取用户可以访问的path列表
             $this->_save_permission($admin_info['id']);
+            // 判断是否需要自动登录
+            $this->save_token($admin_info);
+
+            // 自动验证
+
 //            dump(session('admin_info'));exit;
             return true;
         }
+    }
+
+    /**
+     * 判断是否需要自动登录
+     */
+    public function save_token(array $adminInfo,$is_auto_login=false)
+    {
+//        dump(11);exit;
+        // 获取传过来的token
+        $remember = I('post.remember');
+        if ($remember||$is_auto_login) { //勾选了记住我
+            // 生成令牌
+            $login_token = md5(mcrypt_create_iv(32));
+            // 将令牌保存到cookie中
+            cookie('login_token',$login_token,604800);
+            // 准备添加令牌到数据库的数据
+            $data = [
+                'id'=>$adminInfo['id'],
+                'login_token'=>$login_token,
+            ];
+            $this->setField($data);
+//            dump($login_token);exit;
+            return $login_token;
+
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     *
+     */
+    public function autoLogin(){
+        // 获取cookie中的令牌
+        $login_token = cookie('login_token');
+//
+
+
+         if($login_token){ //cookie中有令牌才验证
+             // 根据客户端传过来的令牌去数据读取一条数据
+             $admin_info = $this->where(['login_token'=>$login_token])->find();
+             // 判断cookie中的令牌和数据库中的是否一致
+             if($admin_info){
+                 // 防止攻击，重新生成令牌
+                 $login_token = $this->save_token($admin_info,true);
+
+                 // 获取拥有的权限
+                 $this->_save_permission($admin_info['id']);
+//                 dump(permission_paths());dump(permission_ids());exit;
+                 // 将新的令牌 保存到$admin_info变量中
+                 $admin_info['login_token'] = $login_token;
+                 // 将管理员新的信息保存到session中
+                 login($admin_info);
+                  return $admin_info;
+             }
+         }else{
+             return false;
+         }
+
     }
 
     /**
@@ -89,26 +189,37 @@ class AdminModel extends Model{
      */
 
     public function _save_permission($id){
-        // 获取管理员可以访问的sql
-        $sql = 'SELECT DISTINCT path  FROM (
+        if($id==15){
+             $sql = 'select id, path from permission';
+        }else{
+
+            // 获取管理员可以访问的路径 sql
+            $sql = 'SELECT DISTINCT p.id ,path  FROM (
             SELECT permission_id FROM admin_role AS ar LEFT JOIN role_permission AS rp ON ar.role_id=rp.role_id
             WHERE ar.admin_id='.$id.'
 UNION SELECT permission_id FROM admin_permission AS ap
             WHERE ap.admin_id='.$id.'
 ) AS res LEFT JOIN permission AS p ON res.permission_id=p.id WHERE p.path <> ""';
+        }
 
         $allow_paths = M()->query($sql);
-//
+
         $paths = [];
+        $permission_ids=[];
         if($allow_paths){
             foreach($allow_paths as $v){
                 $paths[]=$v['path'];
+                $permission_ids[]=$v['id'];
             }
         }
+//        dump($permission_ids);
 //        dump($paths);exit;
         // 将可访问的路径保存到session
-        session('PATHS',$paths);
-//        dump(session('PATHS'));exit;
+//        session('PATHS',$paths);
+//        exit;
+
+        permission_paths($paths);
+        permission_ids($permission_ids);
 
     }
 
