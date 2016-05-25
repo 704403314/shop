@@ -1,0 +1,215 @@
+<extend name='Layout:cart'/>
+<block name='css'>
+    <link rel="stylesheet" href="__CSS__/fillin.css" type="text/css">
+</block>
+
+<block name='content'>
+    <!-- 主体部分 start -->
+    <div class="fillin w990 bc mt15">
+        <form action="{:U('Order/add')}" method="post">
+        <div class="fillin_hd">
+            <h2>填写并核对订单信息</h2>
+        </div>
+
+        <div class="fillin_bd">
+            <!-- 收货人信息  start-->
+            <div class="address">
+                <h3>收货人信息 <a href="{:U('Address/index')}" id="address_modify">[修改]</a></h3>
+                <div class="address_info">
+                    <foreach name="rows" item="row">
+
+                        <p>
+                            <input type="radio" <eq name="row.is_default" value="1">checked</eq> value="{$row.id}" name="address_id"/>{$row.name}  {$row.tel}  {$row.province_name} {$row.city_name} {$row.area_name} {$row.detail_address}
+                        </p>
+                    </foreach>
+
+                </div>
+            </div>
+            <!-- 收货人信息  end-->
+
+            <!-- 配送方式 start -->
+            <div class="delivery">
+                <h3>送货方式 <a href="javascript:;" id="delivery_modify">[修改]</a></h3>
+                <div class="delivery_info">
+                    <p>普通快递送货上门</p>
+                    <p>送货时间不限</p>
+                </div>
+
+                <div class="delivery_select none">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="col1">送货方式</th>
+                                <th class="col2">运费</th>
+                                <th class="col3">运费标准</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <foreach name="deliveries" item="delivery">
+
+                            <tr class="cur">
+                                <td>
+                                    <input class="delivery_item" type="radio" price="{$delivery.price}" name="delivery_id" value="{$delivery.id}"
+                                    <eq name="delivery.is_default" value="1">
+                                    checked="checked"
+                                    </eq> />
+                                    {$delivery.name}
+
+                                </td>
+                                <td>￥{$delivery.price}</td>
+                                <td>{$delivery.intro}</td>
+                            </tr>
+                        </foreach>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div> 
+            <!-- 配送方式 end --> 
+
+            <!-- 支付方式  start-->
+            <div class="pay">
+                <h3>支付方式 <a href="javascript:;" id="pay_modify">[修改]</a></h3>
+                <div class="pay_info">
+                    <p>货到付款</p>
+                </div>
+
+                <div class="pay_select none">
+                    <table>
+                        <foreach name="payments" item="payment">
+
+                            <tr class="cur">
+                                <td class="col1"><input type="radio" name="pay_type_id" <eq name="payment.is_default" value="1"> checked="checked"</eq> value="{$payment.id}"/>{$payment.name}</td>
+                                <td class="col2">{$payment.intro}</td>
+                            </tr>
+                        </foreach>
+
+
+                    </table>
+
+                </div>
+            </div>
+            <!-- 支付方式  end-->
+
+            <!-- 发票信息 start-->
+            <div class="receipt">
+                <h3>发票信息 <a href="javascript:;"  id="receipt_modify">[修改]</a></h3>
+                <div class="receipt_info">
+                    <p>个人发票</p>
+                    <p>内容：明细</p>
+                </div>
+
+                <div class="receipt_select none">
+
+                        <ul>
+                            <li>
+                                <label for="">发票抬头：</label>
+                                <input type="radio" name="invoice_type" checked="checked" value="1" class="personal" />个人
+                                <input type="radio" name="invoice_type" value="2" class="company"/>单位
+                                <input type="text" name="invoice_name" value="" class="txt company_input" disabled="disabled" />
+                            </li>
+                            <li>
+                                <label for="">发票内容：</label>
+                                <input type="radio" name="invoice_content" value="1" checked="checked" />明细
+                                <input type="radio" name="invoice_content" value="2" />办公用品
+                                <input type="radio" name="invoice_content" value="3" />体育休闲
+                                <input type="radio" name="invoice_content" value="4" />耗材
+                            </li>
+                        </ul>						
+
+                    <a href="" class="confirm_btn"><span>确认发票信息</span></a>
+                </div>
+            </div>
+            <!-- 发票信息 end-->
+
+            <!-- 商品清单 start -->
+            <div class="goods">
+                <h3>商品清单</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="col1">商品</th>
+                            <th class="col3">价格</th>
+                            <th class="col4">数量</th>
+                            <th class="col5">小计</th>
+                        </tr>	
+                    </thead>
+                    <tbody>
+                    <foreach name="goods_list" item="goods">
+
+                        <tr>
+                            <td class="col1"><a href=""><img src="{$goods.logo}" alt="" /></a>  <strong><a href="">{$goods.name}</a></strong></td>
+                            <td class="col3">￥{$goods.shop_price}</td>
+                            <td class="col4"> {$goods.amount}</td>
+                            <td class="col5"><span>￥{$goods.sub_total}</span></td>
+                        </tr>
+                    </foreach>
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">
+                                <ul>
+                                    <li>
+                                        <span>{$total_amount} 件商品，总商品金额：</span>
+                                        <em>￥{$total_price}</em>
+                                    </li>
+
+                                    <li>
+                                        <span>运费：</span>
+                                        <em class="delivery_price"></em>
+                                    </li>
+                                    <li>
+                                        <span>应付总额：</span>
+                                        <em class="total_item"></em>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <!-- 商品清单 end -->
+        </form>
+        </div>
+
+        <div class="fillin_ft">
+            <a href="javascript:;" onclick="$('form').submit();"><span>提交订单</span></a>
+                <p>应付总额：<strong class="total_item"></strong></p>
+
+        </div>
+    </div>
+    <!-- 主体部分 end -->
+</block>
+<block name='js'>
+    <script type="text/javascript" src="__JS__/cart2.js"></script>
+    <script type="text/javascript">
+        $(function(){
+
+            // 找到被选中的送货方式节点
+            var delivery_node = $('.delivery_item:checked');
+            // 默认的送货方式价格
+            var delivery_price = delivery_node.attr('price');
+            // 找到总价格节点
+            var total_item_node = $('.total_item');
+            // 为运输方式节点赋值
+            $('.delivery_price').text('￥'+parseFloat(delivery_price).toFixed(2));
+            // 为总价格赋值
+            total_item_node.text('￥'+(parseFloat(delivery_price)+{$total_price}).toFixed(2)+'元');
+            $('.delivery_item').change(function(){
+
+                // 更改后的运输方式价格
+                 delivery_price = $(this).attr('price');
+                // 找到总价格节点
+                 total_item_node = $('.total_item');
+
+                // 为运输方式节点赋值
+                $('.delivery_price').text(parseFloat(delivery_price).toFixed(2));
+                // 为总价格赋值
+                total_item_node.text('￥'+(parseFloat(delivery_price)+{$total_price}).toFixed(2)+'元');
+            })
+
+        })
+    </script>
+</block>

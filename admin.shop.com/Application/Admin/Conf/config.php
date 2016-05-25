@@ -6,7 +6,6 @@ return array(
         'Admin/Captcha/captcha',
         'Admin/Admin/logout',
         'Admin/Admin/autoLogin',
-        'Admin/Upload/upload',
         'Admin/Editor/ueditor',
     ],
     'INDEX_URL'=>[

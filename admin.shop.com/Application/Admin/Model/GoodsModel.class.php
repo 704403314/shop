@@ -211,6 +211,27 @@ class GoodsModel extends Model{
             $this->rollback();
             return false;
         }
+
+        // 添加会员价格
+        $data = [];
+        $member_prices = I('post.member_price');
+        foreach($member_prices as $key=>$goods_level_price){
+            if(empty($goods_level_price)){
+                continue;
+            }
+            $data[] = [
+                'goods_id'=>$id,
+                'member_level_id'=>$key,
+                'price'=>$goods_level_price,
+            ];
+        }
+        $member_goods_model = M('MemberGoodsPrice');
+        if($member_goods_model->addAll($data) === false){
+            $this->error = '添加会员价格失败';
+            $this->rollback();
+            return false;
+        }
+
         $this->commit();
         return true;
     }
@@ -219,6 +240,7 @@ class GoodsModel extends Model{
      * 修改商品信息
      */
     public function updateGoods($id){
+
         // 开启事务
         $this->startTrans();
         // 更新基本数据
@@ -241,25 +263,47 @@ class GoodsModel extends Model{
 
         // 获取传过来的相册图片地址
         $paths = I('post.path');
-        if($paths == false){
-            $this->commit();
-            return true;
-        }
+        if($paths != false){
+            // 准备添加相册数据
+            $gallery_data = '';
+            foreach($paths as $v){
+                $gallery_data[]=[
+                    'goods_id'=>$id,
+                    'path'=>$v,
+                ] ;
+            }
 
-        // 准备添加相册数据
-        $gallery_data = '';
-        foreach($paths as $v){
-            $gallery_data[]=[
-                'goods_id'=>$id,
-                'path'=>$v,
-            ] ;
-        }
-
-        // 添加相册数据
+            // 添加相册数据
 //        dump($gallery_data);exit;
-        $res = M('GoodsGallery')->addAll($gallery_data);
-        if($res === false){
-            $this->error = M('GoodsGallery')->getError();
+            $res = M('GoodsGallery')->addAll($gallery_data);
+            if($res === false){
+                $this->error = M('GoodsGallery')->getError();
+                $this->rollback();
+                return false;
+            }
+        }
+
+
+
+        // 先删除商品原有会员价格
+        $member_goods_model = M('MemberGoodsPrice');
+        $member_goods_model->where(['goods_id'=>$id])->delete();
+        // 添加会员价格
+        $data = [];
+        $member_prices = I('post.member_price');
+        foreach($member_prices as $key=>$goods_level_price){
+            if(empty($goods_level_price)){
+                continue;
+            }
+            $data[] = [
+                'goods_id'=>$id,
+                'member_level_id'=>$key,
+                'price'=>$goods_level_price,
+            ];
+        }
+
+        if($member_goods_model->addAll($data) === false){
+            $this->error = '添加会员价格失败';
             $this->rollback();
             return false;
         }

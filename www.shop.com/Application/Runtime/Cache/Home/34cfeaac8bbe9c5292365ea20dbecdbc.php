@@ -24,9 +24,7 @@
                 </div>
                 <div class="topnav_right fr">
                     <ul>
-                        <li>您好<?php echo ($user_info["username"]); ?>，欢迎来到京西！
-                            <?php if(isset($user_info)): else: ?>
-                                    [<a href="<?php echo U('Member/login');?>">登录</a>] [<a href="<?php echo U('Member/register');?>">免费注册</a>]<?php endif; ?>
+                        <li id="userinfo">
                             
                         </li>
                         <li class="line">|</li>
@@ -290,8 +288,8 @@
                 <!-- 图片预览区域 start -->
                 <div class="preview fl">
                     <div class="midpic">
-                        <a href="http://www.shop.com/Public/images/preview_l1.jpg" class="jqzoom" rel="gal1">   <!-- 第一幅图片的大图 class 和 rel属性不能更改 -->
-                            <img src="http://www.shop.com/Public/images/preview_m1.jpg" alt="" />               <!-- 第一幅图片的中图 -->
+                        <a href="<?php echo ($row['paths'][0]); ?>-350" class="jqzoom" rel="gal1">   <!-- 第一幅图片的大图 class 和 rel属性不能更改 -->
+                            <img src="<?php echo ($row['paths'][0]); ?>-350"  alt="" />               <!-- 第一幅图片的中图 -->
                         </a>
                     </div>
 
@@ -302,47 +300,13 @@
                         <a href="javascript:;" id="forward" class="on"></a>
                         <div class="smallpic_wrap">
                             <ul>
-                                <li class="cur">
-                                    <a class="zoomThumbActive" href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: 'http://www.shop.com/Public/images/preview_m1.jpg',largeimage: 'http://www.shop.com/Public/images/preview_l1.jpg'}"><img src="http://www.shop.com/Public/images/preview_s1.jpg"></a>
+                                <?php if(is_array($row["paths"])): foreach($row["paths"] as $key=>$path): ?><li <?php if(($key) == "0"): ?>class="cur"<?php endif; ?>>
+                                    <a <?php if(($key) == "0"): ?>class="zoomThumbActive"<?php endif; ?> href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: '<?php echo ($path); ?>-350',largeimage: '<?php echo ($path); ?>-80'}"><img src="<?php echo ($path); ?>-55"></a>
                                 </li>
-                                <li>
-                                    <a href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: 'http://www.shop.com/Public/images/preview_m2.jpg',largeimage: 'http://www.shop.com/Public/images/preview_l2.jpg'}"><img src="http://www.shop.com/Public/images/preview_s2.jpg"></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" 
-                                       rel="{gallery: 'gal1', smallimage: 'http://www.shop.com/Public/images/preview_m3.jpg',largeimage: 'http://www.shop.com/Public/images/preview_l3.jpg'}">  
-                                        <img src="http://www.shop.com/Public/images/preview_s3.jpg"></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" 
-                                       rel="{gallery: 'gal1', smallimage: 'http://www.shop.com/Public/images/preview_m4.jpg',largeimage: 'http://www.shop.com/Public/images/preview_l4.jpg'}">  
-                                        <img src="http://www.shop.com/Public/images/preview_s4.jpg"></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" 
-                                       rel="{gallery: 'gal1', smallimage: 'http://www.shop.com/Public/images/preview_m5.jpg',largeimage: 'http://www.shop.com/Public/images/preview_l5.jpg'}">  
-                                        <img src="http://www.shop.com/Public/images/preview_s5.jpg"></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" 
-                                       rel="{gallery: 'gal1', smallimage: 'http://www.shop.com/Public/images/preview_m6.jpg',largeimage: 'http://www.shop.com/Public/images/preview_l6.jpg'}">  
-                                        <img src="http://www.shop.com/Public/images/preview_s6.jpg"></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" 
-                                       rel="{gallery: 'gal1', smallimage: 'http://www.shop.com/Public/images/preview_m7.jpg',largeimage: 'http://www.shop.com/Public/images/preview_l7.jpg'}">  
-                                        <img src="http://www.shop.com/Public/images/preview_s7.jpg"></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" 
-                                       rel="{gallery: 'gal1', smallimage: 'http://www.shop.com/Public/images/preview_m8.jpg',largeimage: 'http://www.shop.com/Public/images/preview_l8.jpg'}">  
-                                        <img src="http://www.shop.com/Public/images/preview_s8.jpg"></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" 
-                                       rel="{gallery: 'gal1', smallimage: 'http://www.shop.com/Public/images/preview_m9.jpg',largeimage: 'http://www.shop.com/Public/images/preview_l9.jpg'}">  
-                                        <img src="http://www.shop.com/Public/images/preview_s9.jpg"></a>
-                                </li>
+                                    <!--<li <?php if(($key) == "0"): ?>class="cur"<?php endif; ?>>-->
+                                    <!--<a <?php if(($key) == "0"): ?>class="zoomThumbActive"<?php endif; ?> href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: '<?php echo ($path); ?>-m',largeimage: '<?php echo ($path); ?>-l'}"><img src="<?php echo ($path); ?>-s"></a>-->
+                                    <!--</li>--><?php endforeach; endif; ?>
+
                             </ul>
                         </div>
 
@@ -356,9 +320,14 @@
                         <li><span>商品编号： </span><?php echo ($row["sn"]); ?></li>
                         <li class="market_price"><span>定价：</span><em>￥<?php echo ($row["market_price"]); ?></em></li>
                         <li class="shop_price"><span>本店价：</span> <strong>￥<?php echo ($row["shop_price"]); ?></strong> <a href="">(降价通知)</a></li>
+                        <li>
+                            <span>会员价：</span>
+                            <?php if(is_array($row["member_price_list"])): foreach($row["member_price_list"] as $key=>$member_price): echo ($member_price["name"]); ?>:￥<?php echo ($member_price["price"]); ?>&nbsp;&nbsp;<?php endforeach; endif; ?>
+                        </li>
                         <li><span>上架时间：</span><?php echo (date("Y-m-d H:i:s",$row["inputtime"])); ?></li>
+                        <li><span>浏览量：</span><label id='goods-click'></label></li>
                     </ul>
-                    <form action="" method="post" class="choose">
+                    <form action="<?php echo U('Cart/addCart');?>" method="post" class="choose">
                         <ul>
 
                             <li>
@@ -367,6 +336,7 @@
                                     <dd>
                                         <a href="javascript:;" id="reduce_num"></a>
                                         <input type="text" name="amount" value="1" class="amount"/>
+                                        <input type="hidden" name="id" value="<?php echo ($row['id']); ?>"/>
                                         <a href="javascript:;" id="add_num"></a>
                                     </dd>
                                 </dl>
@@ -408,6 +378,7 @@
                                 <li><span>商品编号：</span><?php echo ($row["sn"]); ?></li>
                                 <li><span>品牌：</span><?php echo ($row["bname"]); ?></li>
                                 <li><span>上架时间：</span><?php echo (date("Y-m-d H:i:s",$row["inputtime"])); ?></li>
+                                <li><span>浏览量：</span><label id='goods-click'></label></li>
                             </ul>
                         </div>
 
@@ -684,22 +655,55 @@
         </div>
         <!-- 底部版权 end -->
         <script type="text/javascript" src="http://www.shop.com/Public/js/jquery.min.js"></script>
-        <script type="text/javascript" src="http://www.shop.com/Public/js/header.js"></script>
+        <script type="text/javascript" src="http://www.shop.com/Public/js/header.js"> </script>
+        <script type="text/javascript">
+            $(function(){
+
+                var url = "<?php echo U('Member/getUserInfo');?>";
+
+                $.getJSON(url,function(response){
+//                    alert(1);
+                    if(response){
+                        var html = '您好'+response+'，欢迎来到京西！[<a href="<?php echo U('Member/logout');?>">退出</a>]';
+                    }else{
+                        var html = '您好,欢迎来到京西![<a href="<?php echo U('Member/login');?>">登录</a>] [<a href="<?php echo U('Member/register');?>">免费注册</a>]';
+                    }
+                    $('#userinfo').html(html);
+                });
+            })
+        </script>
         
     <script type="text/javascript" src="http://www.shop.com/Public/js/goods.js"></script>
     <script type="text/javascript" src="http://www.shop.com/Public/js/jqzoom-core.js"></script>
     <!-- jqzoom 效果 -->
     <script type="text/javascript">
         $(function () {
-            $('.jqzoom').jqzoom({
-                zoomType: 'standard',
-                lens: true,
-                preloadImages: false,
-                alwaysOn: false,
-                title: false,
-                zoomWidth: 400,
-                zoomHeight: 400
-            });
+//            alert(1);
+            // 商品每浏览一次 浏览次数加1
+            var url = "<?php echo U('Goods/incTimes');?>";
+            var data = {
+                "goods_id":<?php echo ($row["id"]); ?>
+        }
+        $.getJSON(url,data,function(response){
+
+            $('#goods-click').text(response);
+        });
+
+
+        $('.jqzoom').jqzoom({
+
+            zoomType: 'standard',
+            lens: true,
+            preloadImages: false,
+            alwaysOn: false,
+            title: false,
+            zoomWidth: 400,
+            zoomHeight: 400
+        });
+
+
+
+
         })
     </script>
 

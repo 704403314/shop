@@ -2,11 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-        <title>{$meta_title}</title>
+        <title>购物车页面</title>
         <link rel="stylesheet" href="__CSS__/base.css" type="text/css"/>
         <link rel="stylesheet" href="__CSS__/global.css" type="text/css"/>
         <link rel="stylesheet" href="__CSS__/header.css" type="text/css"/>
-        <link rel="stylesheet" href="__CSS__/login.css" type="text/css"/>
         <link rel="stylesheet" href="__CSS__/footer.css" type="text/css"/>
         <block name='css'></block>
     </head>
@@ -36,12 +35,23 @@
         <!-- 页面头部 start -->
         <div class="header w990 bc mt15">
             <div class="logo w990">
-                <h2 class="fl"><a href="index.html"><img src="__IMG__/logo.png" alt="京西商城"></a></h2>
+                <h2 class="fl"><a href="{:U('Index/index')}"><img src="__IMG__/logo.png" alt="京西商城"></a></h2>
+                <div class="flow fr {$action_name}">
+                    <ul>
+                        <li <if condition='$action_name=="flow1"'>class="cur"</if>>1.我的购物车</li>
+                        <li <if condition='$action_name=="flow2"'>class="cur"</if>>2.填写核对订单信息</li>
+                        <li <if condition='$action_name=="flow3"'>class="cur"</if>>3.成功提交订单</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <!-- 页面头部 end -->
+
+        <div style="clear:both;"></div>
+
+        <!-- 主体部分 start -->
         <block name='content'></block>
-        <!-- 登录主体部分end -->
+        <!-- 主体部分 end -->
 
         <div style="clear:both;"></div>
         <!-- 底部版权 start -->
@@ -69,25 +79,30 @@
                 <a href=""><img src="__IMG__/beian.gif" alt="" /></a>
             </p>
         </div>
+        <!-- 底部版权 end -->
+        
+        
         <script type="text/javascript" src="__JS__/jquery.min.js"></script>
-        <script type="text/javascript">
-            $(function(){
-
-                var url = "{:U('Member/getUserInfo')}";
-//                    alert(1);
-                $.getJSON(url,function(response){
-//                        alert(response);
-                    if(response){
-                        var html = '您好'+response+'，欢迎来到京西！[<a href="{:U('Member/logout')}">退出</a>]';
-                    }else{
-                        var html = '您好,欢迎来到京西![<a href="{:U('Member/login')}">登录</a>] [<a href="{:U('Member/register')}">免费注册</a>]';
-                    }
-                    $('#userinfo').html(html);
-                });
-            })
+        <script type='text/javascript'>
+            /**
+             * [
+             *  username:'wanglaowu'
+             * ]
+             * 
+             * 您好{$user_info.username}，欢迎来到京西！
+                                    [<a href="{:U('Member/login')}">登录</a>] [<a href="{:U('Member/register')}">免费注册</a>]
+             * @param {type} param1
+             * @param {type} param2
+             */
+            $.getJSON('{:U("Member/getUserInfo")}',function(response){
+                if(response){
+                    var html = '您好'+response+'，欢迎来到京西！[<a href="{:U('Member/logout')}">退出</a>]';
+                }else{
+                    var html = '您好,欢迎来到京西![<a href="{:U('Member/login')}">登录</a>] [<a href="{:U('Member/register')}">免费注册</a>]';
+                }
+                $('#userinfo').html(html);
+            });
         </script>
-        <block name='js'>
-
-        </block>
+        <block name='js'></block>
     </body>
 </html>

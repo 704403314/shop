@@ -25,6 +25,7 @@ class CheckPermissionBehavior extends \Think\Behavior{
             $paths = array_merge($paths,C('INDEX_URL'));
             // 获取session中保存的当前管理员可访问的url
 //            $session_paths = session('PATHS');
+//            dump(permission_paths());exit;
             $paths = array_merge(permission_paths(),$paths);
 
         }

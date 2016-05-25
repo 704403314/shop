@@ -73,6 +73,19 @@ class MemberModel extends \Think\Model{
         if($this->add() === false){
             return false;
         }else{
+            $url = 'http://www.shop.com'.U('active',['email'=>I('post.email'),'token'=>\Org\Util\String::randString(30)]);
+            $content = <<<EMAIL
+<h1>注册成功，请激活账号</h1>
+<p style="border:1px dotted blue">请点击<a href='$url'>链接</a>进行激活,如果无法点击,
+请复制以下地址粘贴到浏览器访问:$url</p>
+<p>低调的坚持！</p>
+<p style="text-align:right;">啊咿呀呦有限公司</p>
+EMAIL;
+            $res = sendmail(I('post.email'), '注册成功 请激活邮箱', $content);
+            if($res === false){
+                $this->error = '注册失败';
+                return false;
+            }
             return true;
         }
     }
@@ -101,6 +114,8 @@ class MemberModel extends \Think\Model{
 
             ];
             login($user_info);
+            D('Cart')->cookie2Db();
+            return $this->save($data);
         }else{
             $this->error = '密码错误';
             return false;

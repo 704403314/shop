@@ -32,6 +32,7 @@ class MemberController extends Controller{
      */
     public function register(){
         if(IS_POST){
+//            dump(U('active'));exit;
             // 自动验证用户的数据
             if($this->_model->create('','reg') === false){
                 $this->error($this->_model->getError());
@@ -41,10 +42,17 @@ class MemberController extends Controller{
                 $this->error($this->_model->getError());
             }
 
-            $this->success('注册成功',U('login'));
+            $this->success('注册成功,请激活邮箱');
         }else{
             $this->display();
         }
+    }
+
+    /**
+     * 激活邮箱
+     */
+    public function active(){
+//        echo 1;
     }
 
     public function sendSms($telphone){
@@ -53,7 +61,7 @@ class MemberController extends Controller{
         session('REG_CODE',$code);
         $data = [
            'code'=>$code,
-            'product'=>'哎咿呀呦',
+            'product'=>'这是数据',
         ];
         $res = sendSms($telphone,$data);
         $this->ajaxreturn($res);
@@ -73,7 +81,9 @@ class MemberController extends Controller{
                 $this->error($this->_model->getError());
             }
 
-            $this->success('登陆成功',U('Index/index'));
+            $url = cookie('_self_')?:U('Index/index');
+            cookie('_self_',null);
+            $this->success('登陆成功',$url);
         }else{
             $this->display();
         }
@@ -82,6 +92,7 @@ class MemberController extends Controller{
     /**
      * 验证数据唯一性
      */
+
     public function checkExist(){
         $cond = I('get.');
         $res = $this->_model->where($cond)->count();
@@ -90,5 +101,30 @@ class MemberController extends Controller{
         }else{
             $this->ajaxReturn(true);
         }
+    }
+
+    /**
+     * 获取用户名
+     */
+    public function getUserInfo(){
+        $userinfo = login();
+//        var_dump($userinfo);exit;
+        if($userinfo){
+           $username = $userinfo['username'];
+        }else{
+            $username= '';
+        }
+        $this->ajaxReturn($username);
+    }
+
+    /**
+     * 退出
+     */
+    public function logout(){
+//        dump(login());exit;
+        session(null);
+//
+        cookie(null);
+        $this->success('退出成功',U('Index/index'));
     }
 }

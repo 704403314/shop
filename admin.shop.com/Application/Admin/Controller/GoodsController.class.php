@@ -94,7 +94,9 @@ class GoodsController extends Controller{
             // 获取并展示 商品信息
             $row = $this->_model->getGoodsIntro($id);
             $this->assign('row',$row);
-
+            // 获取会员价格信息
+            $member_goods_model = M('MemberGoodsPrice');
+            $this->assign('member_levels' ,$member_goods_model->where(['goods_id'=>$id,'status'=>1])->select());
             $this->display('add');
         }
     }
@@ -111,6 +113,9 @@ class GoodsController extends Controller{
         // 获取并展示供应商分类列表数据
         $suppliers = D('supplier')->getList();
         $this->assign('suppliers',$suppliers);
+
+        // 获取会员信息
+        $this->assign('member_levels',M('MemberLevel')->where(['status'=>1])->select());
     }
 
     /**

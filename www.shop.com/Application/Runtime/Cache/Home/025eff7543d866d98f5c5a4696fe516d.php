@@ -19,7 +19,7 @@
                 </div>
                 <div class="topnav_right fr">
                     <ul>
-                        <li>您好，欢迎来到京西！[<a href="<?php echo U('login');?>">登录</a>] [<a href="<?php echo U('register');?>">免费注册</a>] </li>
+                        <li id="userinfo"></li>
                         <li class="line">|</li>
                         <li>我的订单</li>
                         <li class="line">|</li>
@@ -130,6 +130,23 @@
                 <a href=""><img src="http://www.shop.com/Public/images/beian.gif" alt="" /></a>
             </p>
         </div>
+        <script type="text/javascript" src="http://www.shop.com/Public/js/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+
+                var url = "<?php echo U('Member/getUserInfo');?>";
+//                    alert(1);
+                $.getJSON(url,function(response){
+//                        alert(response);
+                    if(response){
+                        var html = '您好'+response+'，欢迎来到京西！[<a href="<?php echo U('Member/logout');?>">退出</a>]';
+                    }else{
+                        var html = '您好,欢迎来到京西![<a href="<?php echo U('Member/login');?>">登录</a>] [<a href="<?php echo U('Member/register');?>">免费注册</a>]';
+                    }
+                    $('#userinfo').html(html);
+                });
+            })
+        </script>
         
     <script type="text/javascript" src="http://www.shop.com/Public/js/jquery.min.js"></script>
     <script type="text/javascript">

@@ -43,7 +43,7 @@ return array(
     'SESSION_REDIS_AUTH' => '', //Redis auth认证(密钥中不能有逗号),如果相同只填一个,用英文逗号分隔
 
     //页面静态化的配置
-    'HTML_CACHE_ON'      => true, // 开启静态缓存
+//    'HTML_CACHE_ON'      => true, // 开启静态缓存
     'HTML_CACHE_TIME'    => 3600, // 全局静态缓存有效期（秒）
     'HTML_FILE_SUFFIX'   => '.html', // 设置静态缓存文件后缀
     'HTML_CACHE_RULES'   => array(// 定义静态缓存规则     // 定义格式1 数组方式
@@ -53,5 +53,10 @@ return array(
     ),
 
     'EMAIL_SETTING'=>  require __DIR__.'/email.php',
-
+    'COOKIE_PREFIX'         =>  'www_shop_com_',
+    // 配置redis
+    'DATA_CACHE_TYPE'       =>  'Redis',
+    'host'          => '127.0.0.1',
+    'port'          => 6379,
+    'timeout'       => 3600,
 );

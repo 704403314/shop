@@ -174,6 +174,13 @@
                             </div>
                         </td>
                     </tr>
+                    <hr />
+                    <tr>
+                        <td class="label">会员价：</td>
+                        <td>
+                            <?php if(is_array($member_levels)): foreach($member_levels as $key=>$member_level): echo ($member_level["name"]); ?><input type='text' name='member_price[<?php echo ($member_level["id"]); ?>]' value='<?php echo ($member_level["price"]); ?>'/><br /><?php endforeach; endif; ?>
+                        </td>
+                    </tr>
                 </table>
 
 

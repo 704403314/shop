@@ -21,9 +21,7 @@
                 </div>
                 <div class="topnav_right fr">
                     <ul>
-                        <li>您好<?php echo ($user_info["username"]); ?>，欢迎来到京西！
-                            <?php if(isset($user_info)): else: ?>
-                                    [<a href="<?php echo U('Member/login');?>">登录</a>] [<a href="<?php echo U('Member/register');?>">免费注册</a>]<?php endif; ?>
+                        <li id="userinfo">
                             
                         </li>
                         <li class="line">|</li>
@@ -613,7 +611,23 @@
         </div>
         <!-- 底部版权 end -->
         <script type="text/javascript" src="http://www.shop.com/Public/js/jquery.min.js"></script>
-        <script type="text/javascript" src="http://www.shop.com/Public/js/header.js"></script>
+        <script type="text/javascript" src="http://www.shop.com/Public/js/header.js"> </script>
+        <script type="text/javascript">
+            $(function(){
+
+                var url = "<?php echo U('Member/getUserInfo');?>";
+
+                $.getJSON(url,function(response){
+//                    alert(1);
+                    if(response){
+                        var html = '您好'+response+'，欢迎来到京西！[<a href="<?php echo U('Member/logout');?>">退出</a>]';
+                    }else{
+                        var html = '您好,欢迎来到京西![<a href="<?php echo U('Member/login');?>">登录</a>] [<a href="<?php echo U('Member/register');?>">免费注册</a>]';
+                    }
+                    $('#userinfo').html(html);
+                });
+            })
+        </script>
         
     <script type="text/javascript" src="http://www.shop.com/Public/js/index.js"></script>
 

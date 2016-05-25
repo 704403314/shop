@@ -157,7 +157,8 @@ class Redis {
 	  +----------------------------------------------------------
 	 */
 	public function write($sessID, $sessData) {
-		if (!$sessData || $sessData == $this->get_result) {
+		// 注意修改bug
+		if ($sessData == $this->get_result) {
 			return true;
 		}
 		$this->connect(1);

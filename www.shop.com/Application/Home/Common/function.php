@@ -17,7 +17,7 @@ function login($user_info){
 /**
  * 验证短信验证码
  */
-function sendSms($telephone,$data,$sign='短信认证',$tmplate='SMS_9670483'){
+function sendSms($telephone,$data,$sign='短信认证',$tmplate='SMS_9695883'){
       // 引入阿里大鱼自动加载机制
     vendor('Alidayu.Autoloader');
     date_default_timezone_set('Asia/Shanghai');
@@ -84,4 +84,52 @@ function sendmail($address='hh704403314@126.com',$subject,$content){
 //    echo "<pre>";
 //    var_dump($mail->send());exit;
     return $mail->send();
+}
+
+/**
+ * 连接redis
+ */
+function getRedis(){
+    static $redis = null;
+    if(!$redis instanceof Redis){
+        $redis = new \Redis();
+        $redis->connect('127.0.0.1',6379);
+    }
+
+
+    return $redis;
+}
+
+/**
+ * 对金钱处理
+ */
+function money_format($number){
+    return number_format($number,2,'.','');
+}
+
+/**
+ * // 返回所需列表数据
+ * @param $data    后台传过来的数据
+ * @param $field_id    控件表单值
+ * @param $field_name  控件文本值
+ * @param $name    下拉菜单的名字
+ */
+function arr2select($data,$field_id,$field_name,$name,$selected=''){
+    $html = '<select class="'.$name.'" name="'.$name.'">';
+    $html .= '<option value="">请选择...</option>';
+    // 拼接每一个下拉菜单
+    foreach($data as $row){
+
+        if($selected == $row[$field_id]){
+            $html .= '<option  value="' . $row[$field_id] . '"selected="selected">'.$row[$field_name].'</option>';
+
+        }else{
+            $html .= '<option value="' . $row[$field_id] . '">'.$row[$field_name].'</option>';
+
+        }
+
+
+
+    }
+    return $html .= '</select>';
 }
