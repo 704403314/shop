@@ -1,0 +1,119 @@
+[ 2016-05-26T16:00:12+08:00 ] 127.0.0.1 /Goods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `admin` WHERE `login_token` = '1e1d0ca2a3fa46025a7616a087401690' LIMIT 1   [ RunTime:0.0156s ]
+SQL: UPDATE `admin` SET `login_token`='f8ab2a0b73d2f840887336182892168c' WHERE `id` = 15 [ RunTime:0.0156s ]
+SQL: select id, path from permission [ RunTime:0.0000s ]
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.187500s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.187500s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `goods` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods` WHERE `status` = 1 LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.093750s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.093750s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-26T16:00:12+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-26T16:00:34+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `brand` WHERE `status` = 1  [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `goods_category` WHERE `status` = 1 ORDER BY lft  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `supplier` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `supplier` WHERE `status` = 1  [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `member_level` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `member_level` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM goods g INNER JOIN goods_intro as i on g.id = i.goods_id  WHERE `id` = '3' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `goods_gallery` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`path` FROM `goods_gallery` WHERE `goods_id` = '3'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `member_goods_price` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `member_goods_price` WHERE `goods_id` = 3  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: name D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 181 行.
+NOTIC: [8] Undefined index: id D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 181 行.
+NOTIC: [8] Undefined index: name D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 181 行.
+NOTIC: [8] Undefined index: id D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 181 行.
+NOTIC: [8] Undefined index: name D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 181 行.
+NOTIC: [8] Undefined index: id D:\jingxishop\admin.shop.com\Application\Runtime\Cache\Admin\6a8f293db786f6f88f550553dd7f176d.php 第 181 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046875s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-26T16:00:40+08:00 ] 127.0.0.1 /index.php/Editor/ueditor.html?action=config&&noCache=1464249640401
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-26T16:00:41+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0156s ]
+ERR: 参数错误或者未定义:id
+
+[ 2016-05-26T16:00:41+08:00 ] 127.0.0.1 /index.php/Goods/edit/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+INFO: [ action_begin ] --START--
+INFO: Run \Admin\Behaviors\CheckPermissionBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0000s ]
+ERR: 参数错误或者未定义:id
+

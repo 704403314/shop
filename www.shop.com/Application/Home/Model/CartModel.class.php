@@ -88,9 +88,37 @@ class CartModel extends Model{
             $goods_ids = array_keys($cart_list);
             // 获取所有购物车中的商品信息
             $goods_infos = D('Goods')->where(['id'=>['in',$goods_ids]])->select();
+
+            // 获取会员积分
+            if($user_info){
+                   $score = M('Member')->getFieldById($user_info['id'],'score');
+            }else{
+                $score = 0;
+            }
+
+            // 查询用户会员级别条件
+            $cond = [
+                 'bottom'=>['elt',$score],
+                 'top'=>['egt',$score],
+            ];
+            // 查找会员级别 和折扣
+            $member_level_info = M('MemberLevel')->field('id,discount')->where($cond)->find();
+            //dump($member_level_info);exit;
+
             $data = [];
             foreach($goods_infos as $goods_info){
-                $goods_info['shop_price'] = money_format($goods_info['shop_price']);
+                $price_cond = [
+                    'goods_id'=>$goods_info['id'],
+                    'member_level_id'=>$member_level_info['id'],
+                ];
+                // 获取自定义的会员级别对应的商品价格
+                $goods_price = M('MemberGoodsPrice')->where($price_cond)->getField('price');
+                if(!$goods_price){
+                    $goods_price  = $member_level_info['discount']/100*$goods_info['shop_price'];
+
+                }
+
+                $goods_info['shop_price'] = money_format($goods_price);
                // 获取当前被遍历的商品数量
                 $goods_info['amount'] = $cart_list[$goods_info['id']];
                 // 获取当前商品总价
@@ -100,6 +128,7 @@ class CartModel extends Model{
                 $total_amount+=$goods_info['amount'];
                 $goods_list[] = $goods_info;
             }
+            //dump($goods_list);exit;
         }
         return ['total_amount'=>$total_amount,'total_price'=>money_format($total_price),'goods_list'=>$goods_list];
 
@@ -138,5 +167,12 @@ class CartModel extends Model{
         }else{
             return true;
         }
+    }
+
+
+    // 删除购物车信息
+    public  function clear(){
+        $user_info = login();
+        return $this->where(['member_id'=>$user_info['id']])->delete();
     }
 }

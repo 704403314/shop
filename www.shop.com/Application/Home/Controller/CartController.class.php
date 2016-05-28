@@ -88,5 +88,6 @@ class CartController extends Controller{
      */
     public function flow3(){
 
+           $this->display();
     }
 }

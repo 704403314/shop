@@ -27,4 +27,10 @@ class TestController extends Controller{
         }
     }
 
+    public function download(){
+        $file = './1.jpg';
+        header('Content-Disposition:attachment;filename='.$file);
+        readfile('./1.png');
+    }
+
 }

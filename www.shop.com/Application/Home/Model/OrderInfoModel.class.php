@@ -16,7 +16,42 @@ use Think\Model;
  * @package Home\Model
  */
 class OrderInfoModel extends Model{
+    public $statuses = [
+        '0'=>'已取消',
+        '1'=>'待付款',
+        '2'=>'待发货',
+        '3'=>'待收货',
+        '4'=>'完成',
+    ];
 
+    /**
+     * 获取订单信息
+     */
+    public function getOrderInfo(){
+        $user_info = login();
+        $rows = $this->where(['member_id'=>$user_info['id']])->order('id DESC')->select();
+
+        $model = M('OrderInfoItem');
+
+        //
+        foreach($rows as &$row){
+
+            // 获取订单详细信息
+            $goods_list = $model->field('goods_id,goods_name,logo')->where(['order_info_id'=>$row['id']])->select();
+
+            $row['goods_list'] = $goods_list;
+
+
+        }
+
+        //dump($rows);exit;
+        return $rows;
+
+    }
+
+    /**
+     * 添加订单
+     */
     public function addOrder(){
         $user_info = login();
 //        dump(I('post.'));exit;
@@ -46,6 +81,7 @@ class OrderInfoModel extends Model{
         $cart_list = D('Cart')->getCartList();
         $this->data['price'] = $cart_list['total_price'];
         $this->data['status'] = 1;
+        $this->data['inputtime'] = NOW_TIME;
         //dump($this->data);exit;
         // 开启事务
         $this->startTrans();
@@ -67,7 +103,7 @@ class OrderInfoModel extends Model{
             unset($goods['name']);
             $goods['price'] = $goods['shop_price'];
             unset($goods['shop_price']);
-            $goods['price'] = $goods['sub_total'];
+            $goods['total_price'] = $goods['sub_total'];
             unset($goods['sub_total']);
             $order_list[] = $goods;
         }
@@ -120,7 +156,27 @@ class OrderInfoModel extends Model{
             $this->rollback();
             return false;
         }
+
+
+        // 扣库存
+        foreach($cart_list['goods_list'] as $goods){
+            $res = M('Goods')->where(['id'=>$goods['id'],'stock'=>['egt',$goods['amount']]])->count();
+            //dump($cart_list['goods_list']);exit;
+            if(!$res){
+                $this->error = '库存不足';
+                $this->rollback();
+                return false;
+            }
+            // 扣库存
+            M('Goods')->where(['id'=>$goods['id']])->setDec('stock',$goods['amount']);
+        }
+
+
+        // 删除购物车信息
+        D('Cart')->clear();
         $this->commit();
+
+
         return true;
 
     }

@@ -32,7 +32,7 @@ DAY3
   官网地址：http://www.uploadify.com/
   中文手册：http://wenku.baidu.com/view/9df6ce0bde80d4d8d15a4faa.html?re=view
   操作步骤:
-    1.引入jquery代码 和 uploadify提供的js、css文件
+    1.引入jquery文件 和 uploadify提供的js、css文件
     2.配置uploadify上传参数，并指定一个php文件处理上传功能
     3.配置ThinkPHP上传文件需要的参数
     4.实例化上传文件类  调用上传文件方法 拼接保存的路径 将上传后的文件信息转换为json数据返回
@@ -42,7 +42,7 @@ DAY3
 使用layer插件 实现不同的弹出框 提示上传失败或成功
   网站是:http://layer.layui.com/
   操作步骤:
-    1.引入jquery代码 和 layer提供的js、css文件
+    1.引入jquery文件 和 layer提供的js、css文件
     2.成功或失败代码如下:
       layer.msg('上传成功',{icon:6,time:1000});
       layer.msg(data.msg,{icon:5,time:1000});
@@ -50,7 +50,7 @@ DAY3
   ztree插件是国人开发的
   网站是:http://www.ztree.me/v3/main.php
   操作步骤:
-     1.引入jquery代码 和 ztree提供的js、css文件
+     1.引入jquery文件 和 ztree提供的js、css文件
      2.准备ztree配置数据
      3.准备节点数据 由php文件传过来的json字符串形式的数据
      4.找到html节点并使用ztree的方法初始化
@@ -63,7 +63,7 @@ DAY4
   官网地址：http://plugins.jquery.com/treegrid/   
   中文资料地址：http://www.php100.com/html/program/jquery/2014/0328/6730.html
   操作步骤:
-       1.引入jquery代码 和 ztree提供的js、css文件
+       1.引入jquery文件 和 ztree提供的js、css文件
        2.选择目标标签初始化
           $('.tree').treegrid()
        3.为表格添加tree类选择器
@@ -224,3 +224,30 @@ DAY12
     通过ajax请求回显市 区  名称
     如果改为默认地址  要将之前的默认地址取消
 收货地址展示
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+DAY13
+订单详细信息的展示
+订单信息的添加
+    1.添加订单基本信息添加
+    2.添加订单关键信息添加
+    3.添加发票信息添加
+会员级别添加
+会员商品价格的添加
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+DAY14
+会员购买商品时 订单显示会员价格
+已提交订单 会员可以看到订单的状态详细信息
+调用支付宝接口 付款
+    使用步骤:
+        1.将支付宝对应的php插件  放到vendor目录下
+        2. 将alipay.config.php和alipayapi.php 里的代码 复制到项目对应的操作里，配置请求参数
+        3.调用对应的操作  完成支付。
+库存不足时  订单不能提交
+    当库存不足时，订单提交失败。
+定期取消未支付的超时订单
+    可自定义一个过期时间，将超过这个时间未支付的订单状态设为0(取消),并且还原库存
+    可以做一个任务计划 让该操作定期执行。

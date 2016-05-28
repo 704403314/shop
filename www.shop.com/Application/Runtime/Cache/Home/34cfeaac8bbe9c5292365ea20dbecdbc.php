@@ -28,7 +28,7 @@
                             
                         </li>
                         <li class="line">|</li>
-                        <li>我的订单</li>
+                        <li><a href="<?php echo U('Order/index');?>">我的订单</a></li>
                         <li class="line">|</li>
                         <li>客户服务</li>
 
@@ -113,7 +113,7 @@
                 <div class="cart fl">
                     <dl>
                         <dt>
-                            <a href="">去购物车结算</a>
+                            <a href="<?php echo U('Cart/flow1');?>">去购物车结算</a>
                             <b></b>
                         </dt>
                         <dd>
